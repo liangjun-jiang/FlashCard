@@ -1,0 +1,309 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D685FF001368AB88001FCA98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FEFF1368AB88001FCA98 /* UIKit.framework */; };
+		D685FF021368AB88001FCA98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FF011368AB88001FCA98 /* Foundation.framework */; };
+		D685FF041368AB88001FCA98 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FF031368AB88001FCA98 /* CoreGraphics.framework */; };
+		D685FF061368AB88001FCA98 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FF051368AB88001FCA98 /* CoreData.framework */; };
+		D685FF0C1368AB88001FCA98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D685FF0A1368AB88001FCA98 /* InfoPlist.strings */; };
+		D685FF0F1368AB88001FCA98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF0E1368AB88001FCA98 /* main.m */; };
+		D685FF121368AB88001FCA98 /* MySoundImageAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF111368AB88001FCA98 /* MySoundImageAppDelegate.m */; };
+		D685FF151368AB88001FCA98 /* MySoundImage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D685FF131368AB88001FCA98 /* MySoundImage.xcdatamodeld */; };
+		D685FF181368AB88001FCA98 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685FF161368AB88001FCA98 /* MainWindow.xib */; };
+		D685FF1B1368AB88001FCA98 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF1A1368AB88001FCA98 /* MainViewController.m */; };
+		D685FF1D1368AB88001FCA98 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685FF1C1368AB88001FCA98 /* MainView.xib */; };
+		D685FF201368AB88001FCA98 /* FlipsideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF1F1368AB88001FCA98 /* FlipsideViewController.m */; };
+		D685FF221368AB88001FCA98 /* FlipsideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685FF211368AB88001FCA98 /* FlipsideView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D685FEFB1368AB88001FCA98 /* MySoundImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MySoundImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D685FEFF1368AB88001FCA98 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D685FF011368AB88001FCA98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D685FF031368AB88001FCA98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D685FF051368AB88001FCA98 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D685FF091368AB88001FCA98 /* MySoundImage-Info.plist */ = {isa = PBXFileReference; path = "MySoundImage-Info.plist"; sourceTree = "<group>"; };
+		D685FF0B1368AB88001FCA98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D685FF0D1368AB88001FCA98 /* MySoundImage-Prefix.pch */ = {isa = PBXFileReference; path = "MySoundImage-Prefix.pch"; sourceTree = "<group>"; };
+		D685FF0E1368AB88001FCA98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D685FF101368AB88001FCA98 /* MySoundImageAppDelegate.h */ = {isa = PBXFileReference; path = MySoundImageAppDelegate.h; sourceTree = "<group>"; };
+		D685FF111368AB88001FCA98 /* MySoundImageAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySoundImageAppDelegate.m; sourceTree = "<group>"; };
+		D685FF141368AB88001FCA98 /* MySoundImage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySoundImage.xcdatamodel; sourceTree = "<group>"; };
+		D685FF171368AB88001FCA98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		D685FF191368AB88001FCA98 /* MainViewController.h */ = {isa = PBXFileReference; path = MainViewController.h; sourceTree = "<group>"; };
+		D685FF1A1368AB88001FCA98 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D685FF1C1368AB88001FCA98 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		D685FF1E1368AB88001FCA98 /* FlipsideViewController.h */ = {isa = PBXFileReference; path = FlipsideViewController.h; sourceTree = "<group>"; };
+		D685FF1F1368AB88001FCA98 /* FlipsideViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlipsideViewController.m; sourceTree = "<group>"; };
+		D685FF211368AB88001FCA98 /* FlipsideView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FlipsideView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D685FEF81368AB88001FCA98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D685FF001368AB88001FCA98 /* UIKit.framework in Frameworks */,
+				D685FF021368AB88001FCA98 /* Foundation.framework in Frameworks */,
+				D685FF041368AB88001FCA98 /* CoreGraphics.framework in Frameworks */,
+				D685FF061368AB88001FCA98 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D685FEF01368AB88001FCA98 = {
+			isa = PBXGroup;
+			children = (
+				D685FF071368AB88001FCA98 /* MySoundImage */,
+				D685FEFE1368AB88001FCA98 /* Frameworks */,
+				D685FEFC1368AB88001FCA98 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D685FEFC1368AB88001FCA98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D685FEFB1368AB88001FCA98 /* MySoundImage.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D685FEFE1368AB88001FCA98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D685FEFF1368AB88001FCA98 /* UIKit.framework */,
+				D685FF011368AB88001FCA98 /* Foundation.framework */,
+				D685FF031368AB88001FCA98 /* CoreGraphics.framework */,
+				D685FF051368AB88001FCA98 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D685FF071368AB88001FCA98 /* MySoundImage */ = {
+			isa = PBXGroup;
+			children = (
+				D685FF101368AB88001FCA98 /* MySoundImageAppDelegate.h */,
+				D685FF111368AB88001FCA98 /* MySoundImageAppDelegate.m */,
+				D685FF161368AB88001FCA98 /* MainWindow.xib */,
+				D685FF191368AB88001FCA98 /* MainViewController.h */,
+				D685FF1A1368AB88001FCA98 /* MainViewController.m */,
+				D685FF1C1368AB88001FCA98 /* MainView.xib */,
+				D685FF1E1368AB88001FCA98 /* FlipsideViewController.h */,
+				D685FF1F1368AB88001FCA98 /* FlipsideViewController.m */,
+				D685FF211368AB88001FCA98 /* FlipsideView.xib */,
+				D685FF131368AB88001FCA98 /* MySoundImage.xcdatamodeld */,
+				D685FF081368AB88001FCA98 /* Supporting Files */,
+			);
+			path = MySoundImage;
+			sourceTree = "<group>";
+		};
+		D685FF081368AB88001FCA98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D685FF091368AB88001FCA98 /* MySoundImage-Info.plist */,
+				D685FF0A1368AB88001FCA98 /* InfoPlist.strings */,
+				D685FF0D1368AB88001FCA98 /* MySoundImage-Prefix.pch */,
+				D685FF0E1368AB88001FCA98 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D685FEFA1368AB88001FCA98 /* MySoundImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D685FF251368AB88001FCA98 /* Build configuration list for PBXNativeTarget "MySoundImage" */;
+			buildPhases = (
+				D685FEF71368AB88001FCA98 /* Sources */,
+				D685FEF81368AB88001FCA98 /* Frameworks */,
+				D685FEF91368AB88001FCA98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MySoundImage;
+			productName = MySoundImage;
+			productReference = D685FEFB1368AB88001FCA98 /* MySoundImage.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D685FEF21368AB88001FCA98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Harvard University Extension School";
+			};
+			buildConfigurationList = D685FEF51368AB88001FCA98 /* Build configuration list for PBXProject "MySoundImage" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D685FEF01368AB88001FCA98;
+			productRefGroup = D685FEFC1368AB88001FCA98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D685FEFA1368AB88001FCA98 /* MySoundImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D685FEF91368AB88001FCA98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D685FF0C1368AB88001FCA98 /* InfoPlist.strings in Resources */,
+				D685FF181368AB88001FCA98 /* MainWindow.xib in Resources */,
+				D685FF1D1368AB88001FCA98 /* MainView.xib in Resources */,
+				D685FF221368AB88001FCA98 /* FlipsideView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D685FEF71368AB88001FCA98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D685FF0F1368AB88001FCA98 /* main.m in Sources */,
+				D685FF121368AB88001FCA98 /* MySoundImageAppDelegate.m in Sources */,
+				D685FF151368AB88001FCA98 /* MySoundImage.xcdatamodeld in Sources */,
+				D685FF1B1368AB88001FCA98 /* MainViewController.m in Sources */,
+				D685FF201368AB88001FCA98 /* FlipsideViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D685FF0A1368AB88001FCA98 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D685FF0B1368AB88001FCA98 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D685FF161368AB88001FCA98 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D685FF171368AB88001FCA98 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D685FF231368AB88001FCA98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D685FF241368AB88001FCA98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		D685FF261368AB88001FCA98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D685FF271368AB88001FCA98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D685FEF51368AB88001FCA98 /* Build configuration list for PBXProject "MySoundImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D685FF231368AB88001FCA98 /* Debug */,
+				D685FF241368AB88001FCA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D685FF251368AB88001FCA98 /* Build configuration list for PBXNativeTarget "MySoundImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D685FF261368AB88001FCA98 /* Debug */,
+				D685FF271368AB88001FCA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D685FF131368AB88001FCA98 /* MySoundImage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D685FF141368AB88001FCA98 /* MySoundImage.xcdatamodel */,
+			);
+			currentVersion = D685FF141368AB88001FCA98 /* MySoundImage.xcdatamodel */;
+			path = MySoundImage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D685FEF21368AB88001FCA98 /* Project object */;
+}
