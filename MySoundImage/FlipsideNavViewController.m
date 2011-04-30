@@ -1,27 +1,35 @@
 //
-//  FlipsideViewController.m
-//  MySoundImage
+//  FlipsideNavViewController.m
+//  utitliTest
 //
-//  Created by Liangjun Jiang on 4/27/11.
+//  Created by Liangjun Jiang on 4/29/11.
 //  Copyright 2011 Harvard University Extension School. All rights reserved.
 //
 
-#import "FlipsideViewController.h"
+#import "FlipsideNavViewController.h"
 #import "SoundImage.h"
 #import "DetailViewController.h"
 
-@implementation FlipsideViewController
-@synthesize delegate=_delegate;
+@implementation FlipsideNavViewController
+@synthesize delegate=_delegate, navController=_navController;
 @synthesize managedObjectContext,addingManagedObjectContext;
 @synthesize fetchedResultsController;
-@synthesize tableView=_tableView;
-@synthesize navigationController=_navigationController;
+
+
+- (id)initWithStyle:(UITableViewStyle)style
+{
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
+}
 
 
 - (void)dealloc
 {   
-    [_navigationController release];
-    [_tableView release];
+    [_navController release];
+    //[_tableView release];
     [managedObjectContext release];
     [fetchedResultsController release];
     [super dealloc];
@@ -32,9 +40,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"photos";
     
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done" style:UIBarButtonItemStyleBordered target:self action:@selector(done:)];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone  
+                                                                                target:self action:@selector(done:)];
     
     self.navigationItem.leftBarButtonItem = doneButton;
     
@@ -45,16 +53,20 @@
     [doneButton release];
     [addButton release];
     
-   
+    
     NSError *error;
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		// Update to handle the error appropriately.
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
+
+    // Uncomment the following line to preserve selection between presentations.
+    // self.clearsSelectionOnViewWillAppear = NO;
+ 
+    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
-
 
 - (void)viewWillAppear:(BOOL)animated {
     [self.tableView reloadData];
@@ -165,14 +177,14 @@
 
 - (IBAction)done:(id)sender
 {
-    [self.delegate flipsideViewControllerDidFinish:self];
+    [self.delegate flipsideNavViewControllerDidFinish:self];
 }
 
 - (IBAction)add:(id)sender {
     //AddViewController *addViewController = [[AddViewController alloc] initWithStyle:UITableViewStyleGrouped];
     AddViewController *addViewController = [[AddViewController alloc] initWithNibName:@"DetailView" bundle:nil];
     addViewController.delegate = self;
-
+    
     //create a new managed object for the new sound Image - set its persistent store cooridinator to the same as the from the fetched results controller;
     
     //NSManagedObjectContext *addingContext = [[NSManagedObjectContext alloc] init];    
@@ -180,9 +192,9 @@
     
     self.addingManagedObjectContext = addingContext;
     [addingContext release];
-   
+    
     //[addingManagedObjectContext setPersistentStoreCoordinator:[[fetchedResultController managedObjectContext] persistentStoreCoordinator]];
-   
+    
     addViewController.soundImage = (SoundImage *)[NSEntityDescription insertNewObjectForEntityForName:@"SoundImage" inManagedObjectContext:addingContext];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addViewController];
     [self.navigationController presentModalViewController:navigationController animated:YES];
@@ -340,6 +352,7 @@
 }
 
 
+
 - (void) dataTest {
     NSManagedObjectContext *context = [self managedObjectContext];
     NSLog(@"context: %@", context);
@@ -355,14 +368,7 @@
                             inManagedObjectContext:context];
     [bob setValue:@"Bob" forKey:@"name"];
     
-    /*
-     // Computer Science E-76
-     NSManagedObject *course = [NSEntityDescription
-     insertNewObjectForEntityForName:@"Course" 
-     inManagedObjectContext:context];
-     [course setValue:@"Computer Science E-76" forKey:@"title"];
-     [course setValue:[NSSet setWithObjects:alice,bob,nil] forKey:@"students"];
-     */
+    
     NSError *error;
     if (![context save:&error]) {
         NSLog(@"%@", [error localizedDescription]);
@@ -379,18 +385,8 @@
         // output course's title
         NSLog(@"%@", [info valueForKey:@"name"]);
         
-        /*
-         // iterate over students
-         NSSet *students = [info valueForKey:@"students"];
-         for (NSManagedObject *student in students) {
-         
-         // output student's name and concentration
-         NSLog(@"- %@ (%@)", [student valueForKey:@"name"], [student valueForKey:@"concentration"]);
-         }
-         */
     }        
     [fetchRequest release];
     
 }
-
 @end

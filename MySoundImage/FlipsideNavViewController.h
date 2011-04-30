@@ -1,8 +1,8 @@
 //
-//  FlipsideViewController.h
-//  MySoundImage
+//  FlipsideNavViewController.h
+//  utitliTest
 //
-//  Created by Liangjun Jiang on 4/27/11.
+//  Created by Liangjun Jiang on 4/29/11.
 //  Copyright 2011 Harvard University Extension School. All rights reserved.
 //
 
@@ -10,33 +10,33 @@
 #import <CoreData/CoreData.h>
 #import "AddViewController.h"
 
-//@class FlipsideRootViewController;
 
-@protocol FlipsideViewControllerDelegate;
+@protocol FlipsideNavViewControllerDelegate;
 
-@interface FlipsideViewController : UIViewController <NSFetchedResultsControllerDelegate,AddViewControllerDelegate>{
+@interface FlipsideNavViewController : UITableViewController <NSFetchedResultsControllerDelegate,AddViewControllerDelegate> {
+    UINavigationController *navController;
+    
     NSFetchedResultsController *fetchedResultController;
     NSManagedObjectContext *managedObjectContext;
     NSManagedObjectContext *addingManagedObjectContext;
 }
 
-@property (nonatomic, assign) id <FlipsideViewControllerDelegate> delegate;
-@property (nonatomic, retain) UINavigationController *navigationController;
+
+
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain) NSManagedObjectContext *addingManagedObjectContext;
 @property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
 
+@property (nonatomic, assign) id <FlipsideNavViewControllerDelegate> delegate;
+@property (nonatomic,retain) UINavigationController *navController;
 
 - (IBAction)done:(id)sender;
 - (IBAction)add:(id)sender;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 - (void)dataTest;
+
 @end
 
-
-@protocol FlipsideViewControllerDelegate
-- (void)flipsideViewControllerDidFinish:(FlipsideViewController *)controller;
+@protocol FlipsideNavViewControllerDelegate
+- (void)flipsideNavViewControllerDidFinish:(FlipsideNavViewController *)controller;
 @end
-
-

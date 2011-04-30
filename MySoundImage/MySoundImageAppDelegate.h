@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlipsideViewController.h"
 
 @class MainViewController;
 
@@ -22,6 +23,7 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+- (void)createEditableCopyOfDatabaseIfNeeded;
 
 @property (nonatomic, retain) IBOutlet MainViewController *mainViewController;
 

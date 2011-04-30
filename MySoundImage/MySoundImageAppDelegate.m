@@ -29,6 +29,10 @@
     // Add the main view controller's view to the window and display.
     self.window.rootViewController = self.mainViewController;
     [self.window makeKeyAndVisible];
+    
+    
+    
+    
     return YES;
 }
 
@@ -80,10 +84,9 @@
 
 - (void)awakeFromNib
 {
-    /*
-     Typically you should set up the Core Data stack here, usually by passing the managed object context to the first view controller.
-     self.<#View controller#>.managedObjectContext = self.managedObjectContext;
-    */
+    // Typically you should set up the Core Data stack here, usually by passing the managed object context to the first view controller.
+     self.mainViewController.managedObjectContext = self.managedObjectContext;
+   
 }
 
 - (void)saveContext
@@ -153,6 +156,8 @@
         return __persistentStoreCoordinator;
     }
     
+    
+    [self createEditableCopyOfDatabaseIfNeeded];
     NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"MySoundImage.sqlite"];
     
     NSError *error = nil;
@@ -198,5 +203,63 @@
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
 }
+
+// Creates a writable copy of the bundled default database in the application Documents directory.
+- (void)createEditableCopyOfDatabaseIfNeeded {
+    // First, test for existence.
+    BOOL success;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    NSError *error;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"MySoundImage.sqlite"];
+    success = [fileManager fileExistsAtPath:writableDBPath];
+    if (success) return;
+    // The writable database does not exist, so copy the default to the appropriate location.
+    NSString *defaultDBPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"MySoundImage.sqlite"];
+    success = [fileManager copyItemAtPath:defaultDBPath toPath:writableDBPath error:&error];
+    if (!success) {
+        NSAssert1(0, @"Failed to create writable database file with message '%@'.", [error localizedDescription]);
+    }
+    
+    //copy other resource files
+    NSArray *filesInDoc =[[NSArray alloc] initWithArray:[fileManager contentsOfDirectoryAtPath:documentsDirectory error:&error] ];
+    
+    NSRange textRange1;
+    NSRange textRange2;
+    
+    if ([filesInDoc count] <= 2){
+        NSString *sourcePath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@""];
+        NSArray *filesInBundle =[[NSArray alloc] initWithArray:[fileManager contentsOfDirectoryAtPath:sourcePath error:&error] ];
+        for (NSString* obj in filesInBundle){
+             textRange1 = [obj rangeOfString:@".jpg"];
+            if (textRange1.location != NSNotFound){
+                if (![[NSFileManager defaultManager] 
+                      copyItemAtPath:[sourcePath stringByAppendingPathComponent:obj] 
+                      toPath:[documentsDirectory stringByAppendingPathComponent:obj]
+                      error:&error])
+                    NSLog(@"%@", [error localizedDescription]);
+            } else{
+                textRange2 = [obj rangeOfString:@".caf"];
+                if (textRange2.location != NSNotFound){
+                    if (![[NSFileManager defaultManager] 
+                          copyItemAtPath:[sourcePath stringByAppendingPathComponent:obj] 
+                          toPath:[documentsDirectory stringByAppendingPathComponent:obj]
+                          error:&error])
+                        NSLog(@"%@", [error localizedDescription]);
+                }
+            }
+        }
+        
+        [filesInBundle release];
+    }
+    
+   // filesInDoc =[[NSArray alloc] initWithArray:[fileManager contentsOfDirectoryAtPath:documentsDirectory error:&error] ];
+   // NSLog(@"files in Documentation %d", [filesInDoc count]);
+    
+    [filesInDoc release];
+    
+}
+
 
 @end
