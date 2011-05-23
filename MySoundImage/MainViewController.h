@@ -2,8 +2,13 @@
 //  MainViewController.h
 //  MySoundImage
 //
-//  Created by Liangjun Jiang on 4/27/11.
-//  Copyright 2011 Harvard University Extension School. All rights reserved.
+//  Main view is to show images, play sound and 
+//
+// Created by Liangjun Jiang  on 4/27/11.
+//  Apple ID: ljiang510@gmail.com
+//  Copyright 2011 LJSport Apps. LLC. All rights reserved.
+
+
 //
 
 //#import "FlipsideViewController.h"
@@ -13,7 +18,7 @@
 #import <AVFoundation/AVAudioPlayer.h>
 #import <CoreAudio/CoreAudioTypes.h>
 
-@class FlipsideViewController;
+
 @interface MainViewController : UIViewController <NSFetchedResultsControllerDelegate, FlipsideNavViewControllerDelegate,  UIAlertViewDelegate,AVAudioPlayerDelegate> {
     NSFetchedResultsController *fetchedResultController;
     NSManagedObjectContext *managedObjectContext;
@@ -34,7 +39,6 @@
 @property (nonatomic, retain) NSMutableArray  *imagesArray; 
 @property (nonatomic, retain) NSMutableArray *soundArray;
 @property (nonatomic, retain) AVAudioPlayer *audioPlayer;
-@property (nonatomic, retain) IBOutlet FlipsideViewController *flipsideViewController;
 @property (nonatomic, retain) IBOutlet FlipsideNavViewController *flipsideNavViewController;
 
 -(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
@@ -42,6 +46,7 @@
 -(void) handleLongPress:(UILongPressGestureRecognizer *)sender;
 -(void) handleTap:(UITapGestureRecognizer *)sender;
 -(void) play:(int)index;
+-(UIImage *)scaleAndRotateImage:(UIImage *)image;
 -(void) dataTest;
 
 @end

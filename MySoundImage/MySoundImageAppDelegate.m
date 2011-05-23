@@ -2,8 +2,10 @@
 //  MySoundImageAppDelegate.m
 //  MySoundImage
 //
-//  Created by Liangjun Jiang on 4/27/11.
-//  Copyright 2011 Harvard University Extension School. All rights reserved.
+// Created by Liangjun Jiang  on 4/27/11.
+//  Apple ID: ljiang510@gmail.com
+//  Copyright 2011 LJSport Apps. LLC. All rights reserved.
+
 //
 
 #import "MySoundImageAppDelegate.h"
@@ -86,7 +88,7 @@
 {
     // Typically you should set up the Core Data stack here, usually by passing the managed object context to the first view controller.
      self.mainViewController.managedObjectContext = self.managedObjectContext;
-   
+ 
 }
 
 - (void)saveContext
@@ -240,7 +242,7 @@
                       error:&error])
                     NSLog(@"%@", [error localizedDescription]);
             } else{
-                textRange2 = [obj rangeOfString:@".caf"];
+                textRange2 = [obj rangeOfString:@".wav"];
                 if (textRange2.location != NSNotFound){
                     if (![[NSFileManager defaultManager] 
                           copyItemAtPath:[sourcePath stringByAppendingPathComponent:obj] 

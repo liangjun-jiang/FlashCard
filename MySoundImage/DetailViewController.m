@@ -2,8 +2,11 @@
 //  DetailViewController.m
 //  MySoundImage
 //
-//  Created by Liangjun Jiang on 4/27/11.
-//  Copyright 2011 Harvard University Extension School. All rights reserved.
+// Created by Liangjun Jiang  on 4/27/11.
+//  Apple ID: ljiang510@gmail.com
+//  Copyright 2011 LJSport Apps. LLC. All rights reserved.
+
+
 //
 
 #import "DetailViewController.h"
@@ -12,26 +15,22 @@
 
 
 @implementation DetailViewController
-@synthesize soundImage, dateFormatter, undoManager;
+@synthesize soundImage,undoManager;
 @synthesize tableView=_tableView;
-
 
 #pragma mark - View lifecycle
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    //self.tableView.clearsSelectionOnViewWillAppear = NO;
-
+    self.title=@"Info";
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.tableView.allowsSelectionDuringEditing = YES;
 
-    
 }
 
 - (void)viewDidUnload
 {
-    self.dateFormatter = nil;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -128,12 +127,12 @@
             cell.detailTextLabel.text = soundImage.imagePath;
             break;
         case 2:
-            cell.textLabel.text = @"Sound";
-            cell.detailTextLabel.text = soundImage.soundPath;
-            break;    
-        case 3:
             cell.textLabel.text = @"Voice";
             cell.detailTextLabel.text = soundImage.voicePath;
+            break;    
+        case 3:
+            cell.textLabel.text = @"Sound";
+            cell.detailTextLabel.text = soundImage.soundPath;
             break;    
             
     }
@@ -170,14 +169,14 @@
 			controller.editingImage = YES;
         } break;
         case 2: {
-            controller.editedFieldKey = @"soundPath";
-			controller.editedFieldName = NSLocalizedString(@"Sound", @"display name for sound");
-			controller.editingSound = YES;
-        } break;
-        case 3: {
             controller.editedFieldKey = @"voicePath";
 			controller.editedFieldName = NSLocalizedString(@"Voice", @"display name for voice");
 			controller.editingVoice = YES;
+        } break;
+        case 3: {
+            controller.editedFieldKey = @"soundPath";
+			controller.editedFieldName = NSLocalizedString(@"Sound", @"display name for sound");
+			controller.editingSound = YES;
         } break;    
             
     }
@@ -199,7 +198,7 @@
 
 -(void)setUpUndoManager{
     /*
-	 If the book's managed object context doesn't already have an undo manager, then create one and set it for the context and self.
+	 If the soundimage's managed object context doesn't already have an undo manager, then create one and set it for the context and self.
 	 The view controller needs to keep a reference to the undo manager it creates so that it can determine whether to remove the undo manager when editing finishes.
 	 */
 	if (soundImage.managedObjectContext.undoManager == nil) {
@@ -258,19 +257,6 @@
 }
 
 
-
-
-#pragma mark -
-#pragma mark Date Formatter
-
-- (NSDateFormatter *)dateFormatter {	
-	if (dateFormatter == nil) {
-		dateFormatter = [[NSDateFormatter alloc] init];
-		[dateFormatter setDateStyle:NSDateFormatterMediumStyle];
-		[dateFormatter setTimeStyle:NSDateFormatterNoStyle];
-	}
-	return dateFormatter;
-}
 
 
 - (void)dealloc

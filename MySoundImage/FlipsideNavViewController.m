@@ -1,9 +1,10 @@
 //
 //  FlipsideNavViewController.m
-//  utitliTest
-//
-//  Created by Liangjun Jiang on 4/29/11.
-//  Copyright 2011 Harvard University Extension School. All rights reserved.
+// Created by Liangjun Jiang  on 4/27/11.
+//  Apple ID: ljiang510@gmail.com
+//  Copyright 2011 LJSport Apps. LLC. All rights reserved.
+
+
 //
 
 #import "FlipsideNavViewController.h"
@@ -29,7 +30,6 @@
 - (void)dealloc
 {   
     [_navController release];
-    //[_tableView release];
     [managedObjectContext release];
     [fetchedResultsController release];
     [super dealloc];
@@ -60,12 +60,6 @@
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 		exit(-1);  // Fail
 	}
-
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
- 
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -82,7 +76,7 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    return YES;
 }
 
 #pragma mark -
@@ -134,7 +128,7 @@
     return [[[fetchedResultsController sections] objectAtIndex:section] name];
 }
 
-
+/*
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -142,7 +136,7 @@
 		// Delete the managed object.
 		NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
 		[context deleteObject:[fetchedResultsController objectAtIndexPath:indexPath]];
-		
+		NSLog(@"index at %@", indexPath);
 		NSError *error;
 		if (![context save:&error]) {
 			// Update to handle the error appropriately.
@@ -151,7 +145,7 @@
 		}
     }   
 }
-
+*/
 
 #pragma mark -
 #pragma mark Selection and moving
@@ -181,7 +175,6 @@
 }
 
 - (IBAction)add:(id)sender {
-    //AddViewController *addViewController = [[AddViewController alloc] initWithStyle:UITableViewStyleGrouped];
     AddViewController *addViewController = [[AddViewController alloc] initWithNibName:@"DetailView" bundle:nil];
     addViewController.delegate = self;
     
@@ -190,16 +183,19 @@
     //NSManagedObjectContext *addingContext = [[NSManagedObjectContext alloc] init];    
     NSManagedObjectContext *addingContext = [self managedObjectContext];
     
-    self.addingManagedObjectContext = addingContext;
+    //self.addingManagedObjectContext = addingContext;
     [addingContext release];
     
     //[addingManagedObjectContext setPersistentStoreCoordinator:[[fetchedResultController managedObjectContext] persistentStoreCoordinator]];
     
     addViewController.soundImage = (SoundImage *)[NSEntityDescription insertNewObjectForEntityForName:@"SoundImage" inManagedObjectContext:addingContext];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addViewController];
-    [self.navigationController presentModalViewController:navigationController animated:YES];
+    UINavigationController *navControllerWithAddView = [[UINavigationController alloc] initWithRootViewController:addViewController];
+    [self.navController presentModalViewController:navControllerWithAddView animated:YES];
+    navControllerWithAddView.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    addViewController.navController = navControllerWithAddView;
+    
     [addViewController release];
-    [navigationController release];
+    [navControllerWithAddView release];
     
 }
 
@@ -207,8 +203,10 @@
  Add controller's delegate method; informs the delegate that the add operation has completed, and indicates whether the user saved the new book.
  */
 - (void)addViewController:(AddViewController *)controller didFinishWithSave:(BOOL)save {
+   
 	
 	if (save) {
+        NSLog(@"so this is always called?");
 		/*
 		 The new book is associated with the add controller's managed object context.
 		 This is good because it means that any edits that are made don't affect the application's main managed object context -- it's a way of keeping disjoint edits in a separate scratchpad -- but it does make it more difficult to get the new book registered with the fetched results controller.
@@ -275,8 +273,8 @@
 	
 	// Create the sort descriptors array.
 	NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-	NSSortDescriptor *commentDescriptor = [[NSSortDescriptor alloc] initWithKey:@"comment" ascending:YES];
-	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:nameDescriptor, commentDescriptor, nil];
+	NSSortDescriptor *imageDescriptor = [[NSSortDescriptor alloc] initWithKey:@"imagePath" ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:nameDescriptor, imageDescriptor, nil];
 	[fetchRequest setSortDescriptors:sortDescriptors];
 	
 	// Create and initialize the fetch results controller.
@@ -288,7 +286,7 @@
 	[aFetchedResultsController release];
 	[fetchRequest release];
 	[nameDescriptor release];
-	[commentDescriptor release];
+	[imageDescriptor release];
 	[sortDescriptors release];
 	
 	return fetchedResultsController;

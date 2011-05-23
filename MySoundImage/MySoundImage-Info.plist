@@ -12,11 +12,11 @@
 	<string></string>
 	<key>CFBundleIconFiles</key>
 	<array>
-		<string>soundImageIcon-iphone-57x57.png</string>
-		<string>soundImageIcon-iphone-iphon4.png</string>
+		<string>icon-57x57.png</string>
+		<string>icon-114x114.png</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>edu.harvard.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>9F6WTJ8V78.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

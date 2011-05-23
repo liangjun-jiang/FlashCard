@@ -2,8 +2,11 @@
 //  AddViewController.m
 //  MySoundImage
 //
-//  Created by Liangjun Jiang on 4/27/11.
-//  Copyright 2011 Harvard University Extension School. All rights reserved.
+// Created by Liangjun Jiang  on 4/27/11.
+//  Apple ID: ljiang510@gmail.com
+//  Copyright 2011 LJSport Apps. LLC. All rights reserved.
+
+
 //
 
 #import "AddViewController.h"
@@ -11,9 +14,10 @@
 
 @implementation AddViewController
 @synthesize delegate;
-
+@synthesize navController=_navController;
 - (void)dealloc
 {
+    [_navController release];
     [super dealloc];
 }
 
@@ -37,9 +41,19 @@
     [super viewDidLoad];
    
     self.title = @"New";
-    self.navigationItem.leftBarButtonItem = [[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)] autorelease];
-    self.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc]
-                                               initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)] autorelease];
+    
+    // Configure the save button.
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
+    self.navigationItem.rightBarButtonItem = saveButton;
+    
+    // Configure the cancel button.
+    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+    self.navigationItem.leftBarButtonItem = cancelButton;
+    
+    [saveButton release];
+    [cancelButton release];
+    
+   
     [self setUpUndoManager];
     self.editing = YES;
   

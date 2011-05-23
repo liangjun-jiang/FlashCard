@@ -2,9 +2,9 @@
 //  main.m
 //  MySoundImage
 //
-//  Created by Liangjun Jiang (HUID: 20821205) on 4/27/11.
+//  Created by Liangjun Jiang  on 4/27/11.
 //  Apple ID: ljiang510@gmail.com
-//  Copyright 2011 Harvard University Extension School. All rights reserved.
+//  Copyright 2011 LJSport Apps. LLC. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

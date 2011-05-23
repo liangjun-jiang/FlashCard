@@ -1,0 +1,770 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D64DE20B136CAC840050FD39 /* MainView-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64DE20A136CAC840050FD39 /* MainView-iPad.xib */; };
+		D67FCB2B1368C6EB007EFE54 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67FCB2A1368C6EA007EFE54 /* AVFoundation.framework */; };
+		D67FCB2D1368C701007EFE54 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67FCB2C1368C701007EFE54 /* CoreAudio.framework */; };
+		D67FCB841368FFE5007EFE54 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67FCB821368FFE5007EFE54 /* DetailViewController.m */; };
+		D67FCB891369011D007EFE54 /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67FCB881369011D007EFE54 /* AddViewController.m */; };
+		D67FCB8D13690163007EFE54 /* EditingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67FCB8B13690163007EFE54 /* EditingViewController.m */; };
+		D67FCC061369DD18007EFE54 /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67FCC051369DD18007EFE54 /* DetailView.xib */; };
+		D67FCC091369F526007EFE54 /* EditingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67FCC081369F526007EFE54 /* EditingView.xib */; };
+		D67FCC13136A0E0D007EFE54 /* choosePhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = D67FCC12136A0E0C007EFE54 /* choosePhoto.png */; };
+		D67FCC17136A0E64007EFE54 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D67FCC15136A0E5E007EFE54 /* PhotoViewController.m */; };
+		D67FCC18136A0E64007EFE54 /* PhotoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D67FCC16136A0E60007EFE54 /* PhotoViewController.xib */; };
+		D683B8D2136BB50C00E4AB9F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D683B8D1136BB50C00E4AB9F /* Default.png */; };
+		D683B8D4136BB5C200E4AB9F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D683B8D3136BB5C200E4AB9F /* Default@2x.png */; };
+		D685FF001368AB88001FCA98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FEFF1368AB88001FCA98 /* UIKit.framework */; };
+		D685FF021368AB88001FCA98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FF011368AB88001FCA98 /* Foundation.framework */; };
+		D685FF041368AB88001FCA98 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FF031368AB88001FCA98 /* CoreGraphics.framework */; };
+		D685FF061368AB88001FCA98 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D685FF051368AB88001FCA98 /* CoreData.framework */; };
+		D685FF0C1368AB88001FCA98 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D685FF0A1368AB88001FCA98 /* InfoPlist.strings */; };
+		D685FF0F1368AB88001FCA98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF0E1368AB88001FCA98 /* main.m */; };
+		D685FF121368AB88001FCA98 /* MySoundImageAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF111368AB88001FCA98 /* MySoundImageAppDelegate.m */; };
+		D685FF151368AB88001FCA98 /* MySoundImage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D685FF131368AB88001FCA98 /* MySoundImage.xcdatamodeld */; };
+		D685FF181368AB88001FCA98 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685FF161368AB88001FCA98 /* MainWindow.xib */; };
+		D685FF1B1368AB88001FCA98 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF1A1368AB88001FCA98 /* MainViewController.m */; };
+		D685FF1D1368AB88001FCA98 /* MainView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685FF1C1368AB88001FCA98 /* MainView.xib */; };
+		D685FF2B1368AB9A001FCA98 /* MainWindow-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D685FF291368AB9A001FCA98 /* MainWindow-iPad.xib */; };
+		D685FF2E1368AC6D001FCA98 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF2D1368AC6D001FCA98 /* Category.m */; };
+		D685FF311368AC86001FCA98 /* SoundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = D685FF301368AC86001FCA98 /* SoundImage.m */; };
+		D6C0E998138AE503007ECE6E /* bear.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E974138AE503007ECE6E /* bear.wav */; };
+		D6C0E999138AE503007ECE6E /* blackbird.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E975138AE503007ECE6E /* blackbird.wav */; };
+		D6C0E99A138AE503007ECE6E /* bluebird.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E976138AE503007ECE6E /* bluebird.wav */; };
+		D6C0E99B138AE503007ECE6E /* bluejay.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E977138AE503007ECE6E /* bluejay.wav */; };
+		D6C0E99C138AE503007ECE6E /* boat.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E978138AE503007ECE6E /* boat.wav */; };
+		D6C0E99D138AE503007ECE6E /* bobcat.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E979138AE503007ECE6E /* bobcat.wav */; };
+		D6C0E99E138AE503007ECE6E /* bobwhite.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E97A138AE503007ECE6E /* bobwhite.wav */; };
+		D6C0E99F138AE503007ECE6E /* buffalo.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E97B138AE503007ECE6E /* buffalo.wav */; };
+		D6C0E9A0138AE503007ECE6E /* bus.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E97C138AE503007ECE6E /* bus.wav */; };
+		D6C0E9A1138AE503007ECE6E /* car.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E97D138AE503007ECE6E /* car.wav */; };
+		D6C0E9A2138AE503007ECE6E /* cat.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E97E138AE503007ECE6E /* cat.wav */; };
+		D6C0E9A3138AE503007ECE6E /* cheetah.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E97F138AE503007ECE6E /* cheetah.wav */; };
+		D6C0E9A4138AE503007ECE6E /* cougar.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E980138AE503007ECE6E /* cougar.wav */; };
+		D6C0E9A5138AE503007ECE6E /* coyote.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E981138AE503007ECE6E /* coyote.wav */; };
+		D6C0E9A6138AE503007ECE6E /* deer.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E982138AE503007ECE6E /* deer.wav */; };
+		D6C0E9A7138AE503007ECE6E /* dog.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E983138AE503007ECE6E /* dog.wav */; };
+		D6C0E9A8138AE503007ECE6E /* dolphin.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E984138AE503007ECE6E /* dolphin.wav */; };
+		D6C0E9A9138AE503007ECE6E /* elephant.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E985138AE503007ECE6E /* elephant.wav */; };
+		D6C0E9AA138AE503007ECE6E /* frog.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E986138AE503007ECE6E /* frog.wav */; };
+		D6C0E9AB138AE503007ECE6E /* giraffe.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E987138AE503007ECE6E /* giraffe.wav */; };
+		D6C0E9AC138AE503007ECE6E /* goat.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E988138AE503007ECE6E /* goat.wav */; };
+		D6C0E9AD138AE503007ECE6E /* golf.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E989138AE503007ECE6E /* golf.wav */; };
+		D6C0E9AE138AE503007ECE6E /* gorilla.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E98A138AE503007ECE6E /* gorilla.wav */; };
+		D6C0E9AF138AE503007ECE6E /* horse.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E98B138AE503007ECE6E /* horse.wav */; };
+		D6C0E9B0138AE503007ECE6E /* jaquar.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E98C138AE503007ECE6E /* jaquar.wav */; };
+		D6C0E9B1138AE503007ECE6E /* koala.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E98D138AE503007ECE6E /* koala.wav */; };
+		D6C0E9B2138AE503007ECE6E /* lion.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E98E138AE503007ECE6E /* lion.wav */; };
+		D6C0E9B3138AE503007ECE6E /* panda.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E98F138AE503007ECE6E /* panda.wav */; };
+		D6C0E9B4138AE503007ECE6E /* pingpoing.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E990138AE503007ECE6E /* pingpoing.wav */; };
+		D6C0E9B5138AE503007ECE6E /* polarbear.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E991138AE503007ECE6E /* polarbear.wav */; };
+		D6C0E9B6138AE503007ECE6E /* sealion.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E992138AE503007ECE6E /* sealion.wav */; };
+		D6C0E9B7138AE503007ECE6E /* soccer.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E993138AE503007ECE6E /* soccer.wav */; };
+		D6C0E9B8138AE503007ECE6E /* tennis.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E994138AE503007ECE6E /* tennis.wav */; };
+		D6C0E9B9138AE503007ECE6E /* tiger.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E995138AE503007ECE6E /* tiger.wav */; };
+		D6C0E9BA138AE503007ECE6E /* whale.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E996138AE503007ECE6E /* whale.wav */; };
+		D6C0E9BB138AE503007ECE6E /* zebra.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E997138AE503007ECE6E /* zebra.wav */; };
+		D6C0E9D9138AE556007ECE6E /* basketball.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9BC138AE556007ECE6E /* basketball.jpg */; };
+		D6C0E9DA138AE556007ECE6E /* blackbird.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9BD138AE556007ECE6E /* blackbird.jpg */; };
+		D6C0E9DB138AE556007ECE6E /* bluejay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9BE138AE556007ECE6E /* bluejay.jpg */; };
+		D6C0E9DC138AE556007ECE6E /* boat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9BF138AE556007ECE6E /* boat.jpg */; };
+		D6C0E9DD138AE556007ECE6E /* bobcat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C0138AE556007ECE6E /* bobcat.jpg */; };
+		D6C0E9DE138AE556007ECE6E /* bobwhite.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C1138AE556007ECE6E /* bobwhite.jpg */; };
+		D6C0E9DF138AE556007ECE6E /* budgie.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C2138AE556007ECE6E /* budgie.jpg */; };
+		D6C0E9E0138AE556007ECE6E /* bus.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C3138AE556007ECE6E /* bus.jpg */; };
+		D6C0E9E1138AE556007ECE6E /* car.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C4138AE556007ECE6E /* car.jpg */; };
+		D6C0E9E2138AE556007ECE6E /* cat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C5138AE556007ECE6E /* cat.jpg */; };
+		D6C0E9E3138AE556007ECE6E /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C6138AE556007ECE6E /* dog.jpg */; };
+		D6C0E9E4138AE556007ECE6E /* dolphin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C7138AE556007ECE6E /* dolphin.jpg */; };
+		D6C0E9E5138AE556007ECE6E /* elephant.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C8138AE556007ECE6E /* elephant.jpg */; };
+		D6C0E9E6138AE556007ECE6E /* giraffe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9C9138AE556007ECE6E /* giraffe.jpg */; };
+		D6C0E9E7138AE556007ECE6E /* goat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9CA138AE556007ECE6E /* goat.jpg */; };
+		D6C0E9E8138AE556007ECE6E /* golf.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9CB138AE556007ECE6E /* golf.jpg */; };
+		D6C0E9E9138AE556007ECE6E /* gorilla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9CC138AE556007ECE6E /* gorilla.jpg */; };
+		D6C0E9EA138AE556007ECE6E /* horse.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9CD138AE556007ECE6E /* horse.jpg */; };
+		D6C0E9EB138AE556007ECE6E /* jaquar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9CE138AE556007ECE6E /* jaquar.jpg */; };
+		D6C0E9EC138AE556007ECE6E /* lion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9CF138AE556007ECE6E /* lion.jpg */; };
+		D6C0E9ED138AE556007ECE6E /* panda.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D0138AE556007ECE6E /* panda.jpg */; };
+		D6C0E9EE138AE556007ECE6E /* pingpong.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D1138AE556007ECE6E /* pingpong.jpg */; };
+		D6C0E9EF138AE556007ECE6E /* polarbear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D2138AE556007ECE6E /* polarbear.jpg */; };
+		D6C0E9F0138AE556007ECE6E /* sealion.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D3138AE556007ECE6E /* sealion.jpg */; };
+		D6C0E9F1138AE556007ECE6E /* soccer.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D4138AE556007ECE6E /* soccer.jpg */; };
+		D6C0E9F2138AE556007ECE6E /* tennis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D5138AE556007ECE6E /* tennis.jpg */; };
+		D6C0E9F3138AE556007ECE6E /* tiger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D6138AE556007ECE6E /* tiger.jpg */; };
+		D6C0E9F4138AE556007ECE6E /* whale.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D7138AE556007ECE6E /* whale.jpg */; };
+		D6C0E9F5138AE556007ECE6E /* zebra.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9D8138AE556007ECE6E /* zebra.jpg */; };
+		D6C0E9F7138AE5A8007ECE6E /* MySoundImage.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9F6138AE5A8007ECE6E /* MySoundImage.sqlite */; };
+		D6C0E9F9138AE661007ECE6E /* FlipsideNavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D6C0E9F8138AE661007ECE6E /* FlipsideNavViewController.m */; };
+		D6C0E9FB138AE782007ECE6E /* budgie.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9FA138AE782007ECE6E /* budgie.wav */; };
+		D6C0E9FD138AE7C3007ECE6E /* basketball.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9FC138AE7C3007ECE6E /* basketball.wav */; };
+		D6C0E9FF138AE7CE007ECE6E /* pingpong.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9FE138AE7CE007ECE6E /* pingpong.wav */; };
+		D6C0EA09138AEC87007ECE6E /* icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C0EA08138AEC87007ECE6E /* icon-57x57.png */; };
+		D6C0EA0B138AECA9007ECE6E /* icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C0EA0A138AECA9007ECE6E /* icon-114x114.png */; };
+		D6FF05EF136B3A380083C324 /* FlipsideNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FF05ED136B3A380083C324 /* FlipsideNavView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D64DE20A136CAC840050FD39 /* MainView-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView-iPad.xib"; sourceTree = "<group>"; };
+		D67FCB2A1368C6EA007EFE54 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		D67FCB2C1368C701007EFE54 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		D67FCB811368FFE5007EFE54 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		D67FCB821368FFE5007EFE54 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D67FCB871369011D007EFE54 /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		D67FCB881369011D007EFE54 /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		D67FCB8A13690163007EFE54 /* EditingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditingViewController.h; sourceTree = "<group>"; };
+		D67FCB8B13690163007EFE54 /* EditingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditingViewController.m; sourceTree = "<group>"; };
+		D67FCC051369DD18007EFE54 /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		D67FCC081369F526007EFE54 /* EditingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditingView.xib; sourceTree = "<group>"; };
+		D67FCC12136A0E0C007EFE54 /* choosePhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = choosePhoto.png; sourceTree = "<group>"; };
+		D67FCC14136A0E5C007EFE54 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		D67FCC15136A0E5E007EFE54 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
+		D67FCC16136A0E60007EFE54 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
+		D683B8D1136BB50C00E4AB9F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
+		D683B8D3136BB5C200E4AB9F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
+		D685FEFB1368AB88001FCA98 /* SoundImageLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundImageLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D685FEFF1368AB88001FCA98 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D685FF011368AB88001FCA98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D685FF031368AB88001FCA98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D685FF051368AB88001FCA98 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		D685FF091368AB88001FCA98 /* MySoundImage-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MySoundImage-Info.plist"; sourceTree = "<group>"; };
+		D685FF0B1368AB88001FCA98 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D685FF0D1368AB88001FCA98 /* MySoundImage-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MySoundImage-Prefix.pch"; sourceTree = "<group>"; };
+		D685FF0E1368AB88001FCA98 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D685FF101368AB88001FCA98 /* MySoundImageAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MySoundImageAppDelegate.h; sourceTree = "<group>"; };
+		D685FF111368AB88001FCA98 /* MySoundImageAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MySoundImageAppDelegate.m; sourceTree = "<group>"; };
+		D685FF141368AB88001FCA98 /* MySoundImage.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MySoundImage.xcdatamodel; sourceTree = "<group>"; };
+		D685FF171368AB88001FCA98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		D685FF191368AB88001FCA98 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		D685FF1A1368AB88001FCA98 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		D685FF1C1368AB88001FCA98 /* MainView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainView.xib; sourceTree = "<group>"; };
+		D685FF2A1368AB9A001FCA98 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "iPad/en.lproj/MainWindow-iPad.xib"; sourceTree = "<group>"; };
+		D685FF2C1368AC6D001FCA98 /* Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		D685FF2D1368AC6D001FCA98 /* Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
+		D685FF2F1368AC86001FCA98 /* SoundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundImage.h; sourceTree = "<group>"; };
+		D685FF301368AC86001FCA98 /* SoundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundImage.m; sourceTree = "<group>"; };
+		D6C0E974138AE503007ECE6E /* bear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bear.wav; sourceTree = "<group>"; };
+		D6C0E975138AE503007ECE6E /* blackbird.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = blackbird.wav; sourceTree = "<group>"; };
+		D6C0E976138AE503007ECE6E /* bluebird.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bluebird.wav; sourceTree = "<group>"; };
+		D6C0E977138AE503007ECE6E /* bluejay.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bluejay.wav; sourceTree = "<group>"; };
+		D6C0E978138AE503007ECE6E /* boat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = boat.wav; sourceTree = "<group>"; };
+		D6C0E979138AE503007ECE6E /* bobcat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bobcat.wav; sourceTree = "<group>"; };
+		D6C0E97A138AE503007ECE6E /* bobwhite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bobwhite.wav; sourceTree = "<group>"; };
+		D6C0E97B138AE503007ECE6E /* buffalo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = buffalo.wav; sourceTree = "<group>"; };
+		D6C0E97C138AE503007ECE6E /* bus.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bus.wav; sourceTree = "<group>"; };
+		D6C0E97D138AE503007ECE6E /* car.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = car.wav; sourceTree = "<group>"; };
+		D6C0E97E138AE503007ECE6E /* cat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cat.wav; sourceTree = "<group>"; };
+		D6C0E97F138AE503007ECE6E /* cheetah.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cheetah.wav; sourceTree = "<group>"; };
+		D6C0E980138AE503007ECE6E /* cougar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = cougar.wav; sourceTree = "<group>"; };
+		D6C0E981138AE503007ECE6E /* coyote.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coyote.wav; sourceTree = "<group>"; };
+		D6C0E982138AE503007ECE6E /* deer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = deer.wav; sourceTree = "<group>"; };
+		D6C0E983138AE503007ECE6E /* dog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dog.wav; sourceTree = "<group>"; };
+		D6C0E984138AE503007ECE6E /* dolphin.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dolphin.wav; sourceTree = "<group>"; };
+		D6C0E985138AE503007ECE6E /* elephant.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = elephant.wav; sourceTree = "<group>"; };
+		D6C0E986138AE503007ECE6E /* frog.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = frog.wav; sourceTree = "<group>"; };
+		D6C0E987138AE503007ECE6E /* giraffe.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = giraffe.wav; sourceTree = "<group>"; };
+		D6C0E988138AE503007ECE6E /* goat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = goat.wav; sourceTree = "<group>"; };
+		D6C0E989138AE503007ECE6E /* golf.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = golf.wav; sourceTree = "<group>"; };
+		D6C0E98A138AE503007ECE6E /* gorilla.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = gorilla.wav; sourceTree = "<group>"; };
+		D6C0E98B138AE503007ECE6E /* horse.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = horse.wav; sourceTree = "<group>"; };
+		D6C0E98C138AE503007ECE6E /* jaquar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jaquar.wav; sourceTree = "<group>"; };
+		D6C0E98D138AE503007ECE6E /* koala.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = koala.wav; sourceTree = "<group>"; };
+		D6C0E98E138AE503007ECE6E /* lion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = lion.wav; sourceTree = "<group>"; };
+		D6C0E98F138AE503007ECE6E /* panda.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = panda.wav; sourceTree = "<group>"; };
+		D6C0E990138AE503007ECE6E /* pingpoing.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pingpoing.wav; sourceTree = "<group>"; };
+		D6C0E991138AE503007ECE6E /* polarbear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = polarbear.wav; sourceTree = "<group>"; };
+		D6C0E992138AE503007ECE6E /* sealion.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sealion.wav; sourceTree = "<group>"; };
+		D6C0E993138AE503007ECE6E /* soccer.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = soccer.wav; sourceTree = "<group>"; };
+		D6C0E994138AE503007ECE6E /* tennis.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tennis.wav; sourceTree = "<group>"; };
+		D6C0E995138AE503007ECE6E /* tiger.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tiger.wav; sourceTree = "<group>"; };
+		D6C0E996138AE503007ECE6E /* whale.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whale.wav; sourceTree = "<group>"; };
+		D6C0E997138AE503007ECE6E /* zebra.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zebra.wav; sourceTree = "<group>"; };
+		D6C0E9BC138AE556007ECE6E /* basketball.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = basketball.jpg; sourceTree = "<group>"; };
+		D6C0E9BD138AE556007ECE6E /* blackbird.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackbird.jpg; sourceTree = "<group>"; };
+		D6C0E9BE138AE556007ECE6E /* bluejay.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bluejay.jpg; sourceTree = "<group>"; };
+		D6C0E9BF138AE556007ECE6E /* boat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = boat.jpg; sourceTree = "<group>"; };
+		D6C0E9C0138AE556007ECE6E /* bobcat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bobcat.jpg; sourceTree = "<group>"; };
+		D6C0E9C1138AE556007ECE6E /* bobwhite.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bobwhite.jpg; sourceTree = "<group>"; };
+		D6C0E9C2138AE556007ECE6E /* budgie.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = budgie.jpg; sourceTree = "<group>"; };
+		D6C0E9C3138AE556007ECE6E /* bus.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bus.jpg; sourceTree = "<group>"; };
+		D6C0E9C4138AE556007ECE6E /* car.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = car.jpg; sourceTree = "<group>"; };
+		D6C0E9C5138AE556007ECE6E /* cat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cat.jpg; sourceTree = "<group>"; };
+		D6C0E9C6138AE556007ECE6E /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
+		D6C0E9C7138AE556007ECE6E /* dolphin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dolphin.jpg; sourceTree = "<group>"; };
+		D6C0E9C8138AE556007ECE6E /* elephant.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = elephant.jpg; sourceTree = "<group>"; };
+		D6C0E9C9138AE556007ECE6E /* giraffe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = giraffe.jpg; sourceTree = "<group>"; };
+		D6C0E9CA138AE556007ECE6E /* goat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goat.jpg; sourceTree = "<group>"; };
+		D6C0E9CB138AE556007ECE6E /* golf.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = golf.jpg; sourceTree = "<group>"; };
+		D6C0E9CC138AE556007ECE6E /* gorilla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = gorilla.jpg; sourceTree = "<group>"; };
+		D6C0E9CD138AE556007ECE6E /* horse.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = horse.jpg; sourceTree = "<group>"; };
+		D6C0E9CE138AE556007ECE6E /* jaquar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = jaquar.jpg; sourceTree = "<group>"; };
+		D6C0E9CF138AE556007ECE6E /* lion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lion.jpg; sourceTree = "<group>"; };
+		D6C0E9D0138AE556007ECE6E /* panda.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = panda.jpg; sourceTree = "<group>"; };
+		D6C0E9D1138AE556007ECE6E /* pingpong.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pingpong.jpg; sourceTree = "<group>"; };
+		D6C0E9D2138AE556007ECE6E /* polarbear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = polarbear.jpg; sourceTree = "<group>"; };
+		D6C0E9D3138AE556007ECE6E /* sealion.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sealion.jpg; sourceTree = "<group>"; };
+		D6C0E9D4138AE556007ECE6E /* soccer.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = soccer.jpg; sourceTree = "<group>"; };
+		D6C0E9D5138AE556007ECE6E /* tennis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tennis.jpg; sourceTree = "<group>"; };
+		D6C0E9D6138AE556007ECE6E /* tiger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tiger.jpg; sourceTree = "<group>"; };
+		D6C0E9D7138AE556007ECE6E /* whale.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whale.jpg; sourceTree = "<group>"; };
+		D6C0E9D8138AE556007ECE6E /* zebra.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zebra.jpg; sourceTree = "<group>"; };
+		D6C0E9F6138AE5A8007ECE6E /* MySoundImage.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = MySoundImage.sqlite; sourceTree = "<group>"; };
+		D6C0E9F8138AE661007ECE6E /* FlipsideNavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipsideNavViewController.m; sourceTree = "<group>"; };
+		D6C0E9FA138AE782007ECE6E /* budgie.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = budgie.wav; sourceTree = "<group>"; };
+		D6C0E9FC138AE7C3007ECE6E /* basketball.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = basketball.wav; sourceTree = "<group>"; };
+		D6C0E9FE138AE7CE007ECE6E /* pingpong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pingpong.wav; sourceTree = "<group>"; };
+		D6C0EA08138AEC87007ECE6E /* icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-57x57.png"; path = "../icon-57x57.png"; sourceTree = "<group>"; };
+		D6C0EA0A138AECA9007ECE6E /* icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-114x114.png"; path = "../icon-114x114.png"; sourceTree = "<group>"; };
+		D6FF05EB136B3A380083C324 /* FlipsideNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideNavViewController.h; sourceTree = "<group>"; };
+		D6FF05ED136B3A380083C324 /* FlipsideNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideNavView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D685FEF81368AB88001FCA98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D67FCB2D1368C701007EFE54 /* CoreAudio.framework in Frameworks */,
+				D67FCB2B1368C6EB007EFE54 /* AVFoundation.framework in Frameworks */,
+				D685FF001368AB88001FCA98 /* UIKit.framework in Frameworks */,
+				D685FF021368AB88001FCA98 /* Foundation.framework in Frameworks */,
+				D685FF041368AB88001FCA98 /* CoreGraphics.framework in Frameworks */,
+				D685FF061368AB88001FCA98 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D67FCB341368E2D9007EFE54 /* FlipsideView */ = {
+			isa = PBXGroup;
+			children = (
+				D6C0E9F8138AE661007ECE6E /* FlipsideNavViewController.m */,
+				D6FF05EB136B3A380083C324 /* FlipsideNavViewController.h */,
+				D6FF05ED136B3A380083C324 /* FlipsideNavView.xib */,
+			);
+			name = FlipsideView;
+			sourceTree = "<group>";
+		};
+		D67FCB451368EC65007EFE54 /* AddView */ = {
+			isa = PBXGroup;
+			children = (
+				D67FCB871369011D007EFE54 /* AddViewController.h */,
+				D67FCB881369011D007EFE54 /* AddViewController.m */,
+			);
+			name = AddView;
+			sourceTree = "<group>";
+		};
+		D67FCB461368EC77007EFE54 /* EditView */ = {
+			isa = PBXGroup;
+			children = (
+				D67FCC081369F526007EFE54 /* EditingView.xib */,
+				D67FCB8A13690163007EFE54 /* EditingViewController.h */,
+				D67FCB8B13690163007EFE54 /* EditingViewController.m */,
+			);
+			name = EditView;
+			sourceTree = "<group>";
+		};
+		D67FCB861368FFF3007EFE54 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				D67FCB811368FFE5007EFE54 /* DetailViewController.h */,
+				D67FCB821368FFE5007EFE54 /* DetailViewController.m */,
+				D67FCC051369DD18007EFE54 /* DetailView.xib */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
+		D67FCC19136A0E7E007EFE54 /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				D67FCC14136A0E5C007EFE54 /* PhotoViewController.h */,
+				D67FCC15136A0E5E007EFE54 /* PhotoViewController.m */,
+				D67FCC16136A0E60007EFE54 /* PhotoViewController.xib */,
+			);
+			name = PhotoView;
+			sourceTree = "<group>";
+		};
+		D685FEF01368AB88001FCA98 = {
+			isa = PBXGroup;
+			children = (
+				D685FF071368AB88001FCA98 /* MySoundImage */,
+				D685FEFE1368AB88001FCA98 /* Frameworks */,
+				D685FEFC1368AB88001FCA98 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D685FEFC1368AB88001FCA98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D685FEFB1368AB88001FCA98 /* SoundImageLite.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D685FEFE1368AB88001FCA98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D67FCB2C1368C701007EFE54 /* CoreAudio.framework */,
+				D67FCB2A1368C6EA007EFE54 /* AVFoundation.framework */,
+				D685FEFF1368AB88001FCA98 /* UIKit.framework */,
+				D685FF011368AB88001FCA98 /* Foundation.framework */,
+				D685FF031368AB88001FCA98 /* CoreGraphics.framework */,
+				D685FF051368AB88001FCA98 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D685FF071368AB88001FCA98 /* MySoundImage */ = {
+			isa = PBXGroup;
+			children = (
+				D67FCC19136A0E7E007EFE54 /* PhotoView */,
+				D67FCB861368FFF3007EFE54 /* DetailView */,
+				D67FCB461368EC77007EFE54 /* EditView */,
+				D67FCB451368EC65007EFE54 /* AddView */,
+				D67FCB341368E2D9007EFE54 /* FlipsideView */,
+				D685FF341368AF76001FCA98 /* MainWindows */,
+				D685FF331368AF4F001FCA98 /* MainViews */,
+				D685FF321368AC8F001FCA98 /* Data and Model */,
+				D685FF281368AB98001FCA98 /* iPad */,
+				D685FF081368AB88001FCA98 /* Supporting Files */,
+			);
+			path = MySoundImage;
+			sourceTree = "<group>";
+		};
+		D685FF081368AB88001FCA98 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D6C0EA0A138AECA9007ECE6E /* icon-114x114.png */,
+				D6C0EA08138AEC87007ECE6E /* icon-57x57.png */,
+				D6C0E814138AB1C3007ECE6E /* sources */,
+				D683B8D3136BB5C200E4AB9F /* Default@2x.png */,
+				D683B8D1136BB50C00E4AB9F /* Default.png */,
+				D67FCC12136A0E0C007EFE54 /* choosePhoto.png */,
+				D685FF351368AF92001FCA98 /* Resources */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D685FF281368AB98001FCA98 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				D685FF291368AB9A001FCA98 /* MainWindow-iPad.xib */,
+				D64DE20A136CAC840050FD39 /* MainView-iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		D685FF321368AC8F001FCA98 /* Data and Model */ = {
+			isa = PBXGroup;
+			children = (
+				D685FF131368AB88001FCA98 /* MySoundImage.xcdatamodeld */,
+				D685FF2F1368AC86001FCA98 /* SoundImage.h */,
+				D685FF301368AC86001FCA98 /* SoundImage.m */,
+				D685FF2C1368AC6D001FCA98 /* Category.h */,
+				D685FF2D1368AC6D001FCA98 /* Category.m */,
+			);
+			name = "Data and Model";
+			sourceTree = "<group>";
+		};
+		D685FF331368AF4F001FCA98 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				D685FF191368AB88001FCA98 /* MainViewController.h */,
+				D685FF1A1368AB88001FCA98 /* MainViewController.m */,
+				D685FF1C1368AB88001FCA98 /* MainView.xib */,
+			);
+			name = MainViews;
+			sourceTree = "<group>";
+		};
+		D685FF341368AF76001FCA98 /* MainWindows */ = {
+			isa = PBXGroup;
+			children = (
+				D685FF101368AB88001FCA98 /* MySoundImageAppDelegate.h */,
+				D685FF111368AB88001FCA98 /* MySoundImageAppDelegate.m */,
+				D685FF161368AB88001FCA98 /* MainWindow.xib */,
+			);
+			name = MainWindows;
+			sourceTree = "<group>";
+		};
+		D685FF351368AF92001FCA98 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D685FF091368AB88001FCA98 /* MySoundImage-Info.plist */,
+				D685FF0A1368AB88001FCA98 /* InfoPlist.strings */,
+				D685FF0D1368AB88001FCA98 /* MySoundImage-Prefix.pch */,
+				D685FF0E1368AB88001FCA98 /* main.m */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D6C0E814138AB1C3007ECE6E /* sources */ = {
+			isa = PBXGroup;
+			children = (
+				D6C0E9FA138AE782007ECE6E /* budgie.wav */,
+				D6C0E9BC138AE556007ECE6E /* basketball.jpg */,
+				D6C0E9BD138AE556007ECE6E /* blackbird.jpg */,
+				D6C0E9F6138AE5A8007ECE6E /* MySoundImage.sqlite */,
+				D6C0E9BE138AE556007ECE6E /* bluejay.jpg */,
+				D6C0E9BF138AE556007ECE6E /* boat.jpg */,
+				D6C0E9C0138AE556007ECE6E /* bobcat.jpg */,
+				D6C0E9C1138AE556007ECE6E /* bobwhite.jpg */,
+				D6C0E9C2138AE556007ECE6E /* budgie.jpg */,
+				D6C0E9C3138AE556007ECE6E /* bus.jpg */,
+				D6C0E9C4138AE556007ECE6E /* car.jpg */,
+				D6C0E9C5138AE556007ECE6E /* cat.jpg */,
+				D6C0E9C6138AE556007ECE6E /* dog.jpg */,
+				D6C0E9C7138AE556007ECE6E /* dolphin.jpg */,
+				D6C0E9C8138AE556007ECE6E /* elephant.jpg */,
+				D6C0E9C9138AE556007ECE6E /* giraffe.jpg */,
+				D6C0E9CA138AE556007ECE6E /* goat.jpg */,
+				D6C0E9CB138AE556007ECE6E /* golf.jpg */,
+				D6C0E9CC138AE556007ECE6E /* gorilla.jpg */,
+				D6C0E9CD138AE556007ECE6E /* horse.jpg */,
+				D6C0E9CE138AE556007ECE6E /* jaquar.jpg */,
+				D6C0E9CF138AE556007ECE6E /* lion.jpg */,
+				D6C0E9D0138AE556007ECE6E /* panda.jpg */,
+				D6C0E9D1138AE556007ECE6E /* pingpong.jpg */,
+				D6C0E9D2138AE556007ECE6E /* polarbear.jpg */,
+				D6C0E9D3138AE556007ECE6E /* sealion.jpg */,
+				D6C0E9D4138AE556007ECE6E /* soccer.jpg */,
+				D6C0E9D5138AE556007ECE6E /* tennis.jpg */,
+				D6C0E9D6138AE556007ECE6E /* tiger.jpg */,
+				D6C0E9D7138AE556007ECE6E /* whale.jpg */,
+				D6C0E9D8138AE556007ECE6E /* zebra.jpg */,
+				D6C0E974138AE503007ECE6E /* bear.wav */,
+				D6C0E975138AE503007ECE6E /* blackbird.wav */,
+				D6C0E976138AE503007ECE6E /* bluebird.wav */,
+				D6C0E977138AE503007ECE6E /* bluejay.wav */,
+				D6C0E978138AE503007ECE6E /* boat.wav */,
+				D6C0E979138AE503007ECE6E /* bobcat.wav */,
+				D6C0E97A138AE503007ECE6E /* bobwhite.wav */,
+				D6C0E97B138AE503007ECE6E /* buffalo.wav */,
+				D6C0E97C138AE503007ECE6E /* bus.wav */,
+				D6C0E97D138AE503007ECE6E /* car.wav */,
+				D6C0E97E138AE503007ECE6E /* cat.wav */,
+				D6C0E97F138AE503007ECE6E /* cheetah.wav */,
+				D6C0E980138AE503007ECE6E /* cougar.wav */,
+				D6C0E981138AE503007ECE6E /* coyote.wav */,
+				D6C0E9FC138AE7C3007ECE6E /* basketball.wav */,
+				D6C0E9FE138AE7CE007ECE6E /* pingpong.wav */,
+				D6C0E982138AE503007ECE6E /* deer.wav */,
+				D6C0E983138AE503007ECE6E /* dog.wav */,
+				D6C0E984138AE503007ECE6E /* dolphin.wav */,
+				D6C0E985138AE503007ECE6E /* elephant.wav */,
+				D6C0E986138AE503007ECE6E /* frog.wav */,
+				D6C0E987138AE503007ECE6E /* giraffe.wav */,
+				D6C0E988138AE503007ECE6E /* goat.wav */,
+				D6C0E989138AE503007ECE6E /* golf.wav */,
+				D6C0E98A138AE503007ECE6E /* gorilla.wav */,
+				D6C0E98B138AE503007ECE6E /* horse.wav */,
+				D6C0E98C138AE503007ECE6E /* jaquar.wav */,
+				D6C0E98D138AE503007ECE6E /* koala.wav */,
+				D6C0E98E138AE503007ECE6E /* lion.wav */,
+				D6C0E98F138AE503007ECE6E /* panda.wav */,
+				D6C0E990138AE503007ECE6E /* pingpoing.wav */,
+				D6C0E991138AE503007ECE6E /* polarbear.wav */,
+				D6C0E992138AE503007ECE6E /* sealion.wav */,
+				D6C0E993138AE503007ECE6E /* soccer.wav */,
+				D6C0E994138AE503007ECE6E /* tennis.wav */,
+				D6C0E995138AE503007ECE6E /* tiger.wav */,
+				D6C0E996138AE503007ECE6E /* whale.wav */,
+				D6C0E997138AE503007ECE6E /* zebra.wav */,
+			);
+			name = sources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D685FEFA1368AB88001FCA98 /* MySoundImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D685FF251368AB88001FCA98 /* Build configuration list for PBXNativeTarget "MySoundImage" */;
+			buildPhases = (
+				D685FEF71368AB88001FCA98 /* Sources */,
+				D685FEF81368AB88001FCA98 /* Frameworks */,
+				D685FEF91368AB88001FCA98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MySoundImage;
+			productName = MySoundImage;
+			productReference = D685FEFB1368AB88001FCA98 /* SoundImageLite.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D685FEF21368AB88001FCA98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "LjSport Apps";
+			};
+			buildConfigurationList = D685FEF51368AB88001FCA98 /* Build configuration list for PBXProject "SoundImageLite" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D685FEF01368AB88001FCA98;
+			productRefGroup = D685FEFC1368AB88001FCA98 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D685FEFA1368AB88001FCA98 /* MySoundImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D685FEF91368AB88001FCA98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D685FF0C1368AB88001FCA98 /* InfoPlist.strings in Resources */,
+				D685FF181368AB88001FCA98 /* MainWindow.xib in Resources */,
+				D685FF1D1368AB88001FCA98 /* MainView.xib in Resources */,
+				D685FF2B1368AB9A001FCA98 /* MainWindow-iPad.xib in Resources */,
+				D67FCC061369DD18007EFE54 /* DetailView.xib in Resources */,
+				D67FCC091369F526007EFE54 /* EditingView.xib in Resources */,
+				D67FCC13136A0E0D007EFE54 /* choosePhoto.png in Resources */,
+				D67FCC18136A0E64007EFE54 /* PhotoViewController.xib in Resources */,
+				D6FF05EF136B3A380083C324 /* FlipsideNavView.xib in Resources */,
+				D683B8D2136BB50C00E4AB9F /* Default.png in Resources */,
+				D683B8D4136BB5C200E4AB9F /* Default@2x.png in Resources */,
+				D64DE20B136CAC840050FD39 /* MainView-iPad.xib in Resources */,
+				D6C0E998138AE503007ECE6E /* bear.wav in Resources */,
+				D6C0E999138AE503007ECE6E /* blackbird.wav in Resources */,
+				D6C0E99A138AE503007ECE6E /* bluebird.wav in Resources */,
+				D6C0E99B138AE503007ECE6E /* bluejay.wav in Resources */,
+				D6C0E99C138AE503007ECE6E /* boat.wav in Resources */,
+				D6C0E99D138AE503007ECE6E /* bobcat.wav in Resources */,
+				D6C0E99E138AE503007ECE6E /* bobwhite.wav in Resources */,
+				D6C0E99F138AE503007ECE6E /* buffalo.wav in Resources */,
+				D6C0E9A0138AE503007ECE6E /* bus.wav in Resources */,
+				D6C0E9A1138AE503007ECE6E /* car.wav in Resources */,
+				D6C0E9A2138AE503007ECE6E /* cat.wav in Resources */,
+				D6C0E9A3138AE503007ECE6E /* cheetah.wav in Resources */,
+				D6C0E9A4138AE503007ECE6E /* cougar.wav in Resources */,
+				D6C0E9A5138AE503007ECE6E /* coyote.wav in Resources */,
+				D6C0E9A6138AE503007ECE6E /* deer.wav in Resources */,
+				D6C0E9A7138AE503007ECE6E /* dog.wav in Resources */,
+				D6C0E9A8138AE503007ECE6E /* dolphin.wav in Resources */,
+				D6C0E9A9138AE503007ECE6E /* elephant.wav in Resources */,
+				D6C0E9AA138AE503007ECE6E /* frog.wav in Resources */,
+				D6C0E9AB138AE503007ECE6E /* giraffe.wav in Resources */,
+				D6C0E9AC138AE503007ECE6E /* goat.wav in Resources */,
+				D6C0E9AD138AE503007ECE6E /* golf.wav in Resources */,
+				D6C0E9AE138AE503007ECE6E /* gorilla.wav in Resources */,
+				D6C0E9AF138AE503007ECE6E /* horse.wav in Resources */,
+				D6C0E9B0138AE503007ECE6E /* jaquar.wav in Resources */,
+				D6C0E9B1138AE503007ECE6E /* koala.wav in Resources */,
+				D6C0E9B2138AE503007ECE6E /* lion.wav in Resources */,
+				D6C0E9B3138AE503007ECE6E /* panda.wav in Resources */,
+				D6C0E9B4138AE503007ECE6E /* pingpoing.wav in Resources */,
+				D6C0E9B5138AE503007ECE6E /* polarbear.wav in Resources */,
+				D6C0E9B6138AE503007ECE6E /* sealion.wav in Resources */,
+				D6C0E9B7138AE503007ECE6E /* soccer.wav in Resources */,
+				D6C0E9B8138AE503007ECE6E /* tennis.wav in Resources */,
+				D6C0E9B9138AE503007ECE6E /* tiger.wav in Resources */,
+				D6C0E9BA138AE503007ECE6E /* whale.wav in Resources */,
+				D6C0E9BB138AE503007ECE6E /* zebra.wav in Resources */,
+				D6C0E9D9138AE556007ECE6E /* basketball.jpg in Resources */,
+				D6C0E9DA138AE556007ECE6E /* blackbird.jpg in Resources */,
+				D6C0E9DB138AE556007ECE6E /* bluejay.jpg in Resources */,
+				D6C0E9DC138AE556007ECE6E /* boat.jpg in Resources */,
+				D6C0E9DD138AE556007ECE6E /* bobcat.jpg in Resources */,
+				D6C0E9DE138AE556007ECE6E /* bobwhite.jpg in Resources */,
+				D6C0E9DF138AE556007ECE6E /* budgie.jpg in Resources */,
+				D6C0E9E0138AE556007ECE6E /* bus.jpg in Resources */,
+				D6C0E9E1138AE556007ECE6E /* car.jpg in Resources */,
+				D6C0E9E2138AE556007ECE6E /* cat.jpg in Resources */,
+				D6C0E9E3138AE556007ECE6E /* dog.jpg in Resources */,
+				D6C0E9E4138AE556007ECE6E /* dolphin.jpg in Resources */,
+				D6C0E9E5138AE556007ECE6E /* elephant.jpg in Resources */,
+				D6C0E9E6138AE556007ECE6E /* giraffe.jpg in Resources */,
+				D6C0E9E7138AE556007ECE6E /* goat.jpg in Resources */,
+				D6C0E9E8138AE556007ECE6E /* golf.jpg in Resources */,
+				D6C0E9E9138AE556007ECE6E /* gorilla.jpg in Resources */,
+				D6C0E9EA138AE556007ECE6E /* horse.jpg in Resources */,
+				D6C0E9EB138AE556007ECE6E /* jaquar.jpg in Resources */,
+				D6C0E9EC138AE556007ECE6E /* lion.jpg in Resources */,
+				D6C0E9ED138AE556007ECE6E /* panda.jpg in Resources */,
+				D6C0E9EE138AE556007ECE6E /* pingpong.jpg in Resources */,
+				D6C0E9EF138AE556007ECE6E /* polarbear.jpg in Resources */,
+				D6C0E9F0138AE556007ECE6E /* sealion.jpg in Resources */,
+				D6C0E9F1138AE556007ECE6E /* soccer.jpg in Resources */,
+				D6C0E9F2138AE556007ECE6E /* tennis.jpg in Resources */,
+				D6C0E9F3138AE556007ECE6E /* tiger.jpg in Resources */,
+				D6C0E9F4138AE556007ECE6E /* whale.jpg in Resources */,
+				D6C0E9F5138AE556007ECE6E /* zebra.jpg in Resources */,
+				D6C0E9F7138AE5A8007ECE6E /* MySoundImage.sqlite in Resources */,
+				D6C0E9FB138AE782007ECE6E /* budgie.wav in Resources */,
+				D6C0E9FD138AE7C3007ECE6E /* basketball.wav in Resources */,
+				D6C0E9FF138AE7CE007ECE6E /* pingpong.wav in Resources */,
+				D6C0EA09138AEC87007ECE6E /* icon-57x57.png in Resources */,
+				D6C0EA0B138AECA9007ECE6E /* icon-114x114.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D685FEF71368AB88001FCA98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D685FF0F1368AB88001FCA98 /* main.m in Sources */,
+				D685FF121368AB88001FCA98 /* MySoundImageAppDelegate.m in Sources */,
+				D685FF151368AB88001FCA98 /* MySoundImage.xcdatamodeld in Sources */,
+				D685FF1B1368AB88001FCA98 /* MainViewController.m in Sources */,
+				D685FF2E1368AC6D001FCA98 /* Category.m in Sources */,
+				D685FF311368AC86001FCA98 /* SoundImage.m in Sources */,
+				D67FCB841368FFE5007EFE54 /* DetailViewController.m in Sources */,
+				D67FCB891369011D007EFE54 /* AddViewController.m in Sources */,
+				D67FCB8D13690163007EFE54 /* EditingViewController.m in Sources */,
+				D67FCC17136A0E64007EFE54 /* PhotoViewController.m in Sources */,
+				D6C0E9F9138AE661007ECE6E /* FlipsideNavViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D685FF0A1368AB88001FCA98 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D685FF0B1368AB88001FCA98 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		D685FF161368AB88001FCA98 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D685FF171368AB88001FCA98 /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		D685FF291368AB9A001FCA98 /* MainWindow-iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D685FF2A1368AB9A001FCA98 /* en */,
+			);
+			name = "MainWindow-iPad.xib";
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D685FF231368AB88001FCA98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D685FF241368AB88001FCA98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		D685FF261368AB88001FCA98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = SoundImageLite;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D685FF271368AB88001FCA98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				PRODUCT_NAME = SoundImageLite;
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D685FEF51368AB88001FCA98 /* Build configuration list for PBXProject "SoundImageLite" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D685FF231368AB88001FCA98 /* Debug */,
+				D685FF241368AB88001FCA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D685FF251368AB88001FCA98 /* Build configuration list for PBXNativeTarget "MySoundImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D685FF261368AB88001FCA98 /* Debug */,
+				D685FF271368AB88001FCA98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D685FF131368AB88001FCA98 /* MySoundImage.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D685FF141368AB88001FCA98 /* MySoundImage.xcdatamodel */,
+			);
+			currentVersion = D685FF141368AB88001FCA98 /* MySoundImage.xcdatamodel */;
+			path = MySoundImage.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D685FEF21368AB88001FCA98 /* Project object */;
+}
