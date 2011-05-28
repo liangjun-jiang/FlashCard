@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D6396025138AFEFF007BF2D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = D6396027138AFEFF007BF2D0 /* Localizable.strings */; };
 		D64DE20B136CAC840050FD39 /* MainView-iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D64DE20A136CAC840050FD39 /* MainView-iPad.xib */; };
 		D67FCB2B1368C6EB007EFE54 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67FCB2A1368C6EA007EFE54 /* AVFoundation.framework */; };
 		D67FCB2D1368C701007EFE54 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D67FCB2C1368C701007EFE54 /* CoreAudio.framework */; };
@@ -110,6 +111,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D6396026138AFEFF007BF2D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D6396036138B0E52007BF2D0 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		D6396047138B5C34007BF2D0 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D6396049138B5C37007BF2D0 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D639604A138B5C40007BF2D0 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D639604B138B5C45007BF2D0 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
+		D639604C138B5D9B007BF2D0 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		D64DE20A136CAC840050FD39 /* MainView-iPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "MainView-iPad.xib"; sourceTree = "<group>"; };
 		D67FCB2A1368C6EA007EFE54 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D67FCB2C1368C701007EFE54 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
@@ -127,7 +135,7 @@
 		D67FCC16136A0E60007EFE54 /* PhotoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoViewController.xib; sourceTree = "<group>"; };
 		D683B8D1136BB50C00E4AB9F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = ../Default.png; sourceTree = "<group>"; };
 		D683B8D3136BB5C200E4AB9F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "../Default@2x.png"; sourceTree = "<group>"; };
-		D685FEFB1368AB88001FCA98 /* SoundImageLite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundImageLite.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D685FEFB1368AB88001FCA98 /* SoundImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoundImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D685FEFF1368AB88001FCA98 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D685FF011368AB88001FCA98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D685FF031368AB88001FCA98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -302,7 +310,7 @@
 		D685FEFC1368AB88001FCA98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D685FEFB1368AB88001FCA98 /* SoundImageLite.app */,
+				D685FEFB1368AB88001FCA98 /* SoundImage.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +355,7 @@
 				D683B8D1136BB50C00E4AB9F /* Default.png */,
 				D67FCC12136A0E0C007EFE54 /* choosePhoto.png */,
 				D685FF351368AF92001FCA98 /* Resources */,
+				D6396027138AFEFF007BF2D0 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -496,7 +505,7 @@
 			);
 			name = MySoundImage;
 			productName = MySoundImage;
-			productReference = D685FEFB1368AB88001FCA98 /* SoundImageLite.app */;
+			productReference = D685FEFB1368AB88001FCA98 /* SoundImage.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -513,6 +522,12 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
+				"zh-Hans",
+				fr,
+				de,
+				ko,
+				ja,
 			);
 			mainGroup = D685FEF01368AB88001FCA98;
 			productRefGroup = D685FEFC1368AB88001FCA98 /* Products */;
@@ -612,6 +627,7 @@
 				D6C0E9FF138AE7CE007ECE6E /* pingpong.wav in Resources */,
 				D6C0EA09138AEC87007ECE6E /* icon-57x57.png in Resources */,
 				D6C0EA0B138AECA9007ECE6E /* icon-114x114.png in Resources */,
+				D6396025138AFEFF007BF2D0 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -639,6 +655,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		D6396027138AFEFF007BF2D0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D6396026138AFEFF007BF2D0 /* en */,
+				D6396036138B0E52007BF2D0 /* zh-Hans */,
+				D6396047138B5C34007BF2D0 /* fr */,
+				D6396049138B5C37007BF2D0 /* ja */,
+				D639604A138B5C40007BF2D0 /* ko */,
+				D639604B138B5C45007BF2D0 /* de */,
+				D639604C138B5D9B007BF2D0 /* es */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		D685FF0A1368AB88001FCA98 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -670,7 +700,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Liangjun Jiang";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -678,8 +709,11 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = SoundImage;
+				PROVISIONING_PROFILE = "B86C3A48-1E8D-4C69-86A3-DE0BF9662D5E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B86C3A48-1E8D-4C69-86A3-DE0BF9662D5E";
+				SDKROOT = iOS4.0;
 			};
 			name = Debug;
 		};
@@ -687,14 +721,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Liangjun Jiang";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
-				SDKROOT = iphoneos;
+				PRODUCT_NAME = SoundImage;
+				PROVISIONING_PROFILE = "B86C3A48-1E8D-4C69-86A3-DE0BF9662D5E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B86C3A48-1E8D-4C69-86A3-DE0BF9662D5E";
+				SDKROOT = iOS4.0;
 			};
 			name = Release;
 		};
@@ -702,13 +740,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
 				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = SoundImageLite;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = SoundImage;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -718,17 +758,56 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
 				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
-				PRODUCT_NAME = SoundImageLite;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = SoundImage;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		D6F38988138CAAB70011431C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Liangjun Jiang";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Liangjun Jiang";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PRODUCT_NAME = SoundImage;
+				PROVISIONING_PROFILE = "B86C3A48-1E8D-4C69-86A3-DE0BF9662D5E";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B86C3A48-1E8D-4C69-86A3-DE0BF9662D5E";
+				SDKROOT = iOS4.0;
+			};
+			name = Distribution;
+		};
+		D6F38989138CAAB70011431C /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				PRODUCT_NAME = SoundImage;
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
 		};
 /* End XCBuildConfiguration section */
 
@@ -738,18 +817,20 @@
 			buildConfigurations = (
 				D685FF231368AB88001FCA98 /* Debug */,
 				D685FF241368AB88001FCA98 /* Release */,
+				D6F38988138CAAB70011431C /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 		D685FF251368AB88001FCA98 /* Build configuration list for PBXNativeTarget "MySoundImage" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D685FF261368AB88001FCA98 /* Debug */,
 				D685FF271368AB88001FCA98 /* Release */,
+				D6F38989138CAAB70011431C /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 /* End XCConfigurationList section */
 
