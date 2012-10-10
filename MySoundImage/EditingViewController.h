@@ -25,6 +25,8 @@
     
     BOOL editingSound;
     BOOL editingVoice;
+    
+    BOOL editing;
     UIPickerView *soundPicker;
     UIButton *photoButton;
     UIButton *recordButton;
@@ -40,6 +42,10 @@
     AVAudioRecorder *recorder;
     AVAudioPlayer *audioPlayer;
     UIImageView *photoImageView;
+    
+    //UIBarButtonItem
+    UIBarButtonItem *saveButton;
+    UIBarButtonItem *cancelButton;
     
 }
 
@@ -61,6 +67,9 @@
 @property (nonatomic, retain) IBOutlet UIButton *stopButton;
 @property (nonatomic, retain) IBOutlet UIButton *stopPlayerButton;
 @property (nonatomic, retain) IBOutlet UIImageView *photoImageView;
+
+@property (nonatomic, retain) UIBarButtonItem *cancelButton;
+@property (nonatomic, retain) UIBarButtonItem *saveButton;
 //@property (nonatomic, retain) NSString *placeHolder;
 
 

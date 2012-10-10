@@ -23,7 +23,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title=@"Info";
+    self.title=NSLocalizedString(@"INFO",@"");
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.tableView.allowsSelectionDuringEditing = YES;
 
@@ -78,7 +78,10 @@
 		if (![soundImage.managedObjectContext save:&error]) {
 			// Update to handle the error appropriately.
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-			exit(-1);  // Fail
+			UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
+            [alertView show];
+            [alertView release];
+            //exit(-1);  // Fail
 		}
 	}
 }
@@ -119,21 +122,22 @@
     
     switch (indexPath.row) {
         case 0:
-            cell.textLabel.text = @"Name";
-            cell.detailTextLabel.text = soundImage.name;
+            cell.textLabel.text = NSLocalizedString(@"NAME", @"");
+                cell.detailTextLabel.text = soundImage.name;
             break;
         case 1:
-            cell.textLabel.text = @"Image";
+            cell.textLabel.text = NSLocalizedString(@"IMAGE", @"");;
             cell.detailTextLabel.text = soundImage.imagePath;
             break;
         case 2:
-            cell.textLabel.text = @"Voice";
+            cell.textLabel.text = NSLocalizedString(@"VOICE", @"");;
             cell.detailTextLabel.text = soundImage.voicePath;
             break;    
         case 3:
-            cell.textLabel.text = @"Sound";
+            cell.textLabel.text =NSLocalizedString(@"SOUND", @"");;
             cell.detailTextLabel.text = soundImage.soundPath;
             break;    
+        // todo: category
             
     }
     

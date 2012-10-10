@@ -41,9 +41,8 @@
 {
     [super viewDidLoad];
     
-    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone  
-                                                                                target:self action:@selector(done:)];
-    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"DONE", @"") 
+                                                                   style:UIBarButtonItemStyleDone                                   target:self action:@selector(done:)]; 
     self.navigationItem.leftBarButtonItem = doneButton;
     
     // Configure the add button.
@@ -58,7 +57,11 @@
 	if (![[self fetchedResultsController] performFetch:&error]) {
 		// Update to handle the error appropriately.
 		NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-		exit(-1);  // Fail
+		
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
+        [alertView show];
+        [alertView release];
+        //exit(-1);  // Fail
 	}
 }
 
@@ -122,13 +125,16 @@
 	cell.textLabel.text = soundImage.name;
 }
 
-
+//todo: we actually want to show the category's name
+/*
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-	// Display the authors' names as section headings.
+	// Display the category's names as section headings.
     return [[[fetchedResultsController sections] objectAtIndex:section] name];
 }
+*/
 
-/*
+
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
@@ -136,16 +142,18 @@
 		// Delete the managed object.
 		NSManagedObjectContext *context = [fetchedResultsController managedObjectContext];
 		[context deleteObject:[fetchedResultsController objectAtIndexPath:indexPath]];
-		NSLog(@"index at %@", indexPath);
+		
 		NSError *error;
 		if (![context save:&error]) {
-			// Update to handle the error appropriately.
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-			exit(-1);  // Fail
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
+            [alertView show];
+            [alertView release];
+			//exit(-1);  // Fail
 		}
     }   
 }
-*/
+
 
 #pragma mark -
 #pragma mark Selection and moving
@@ -206,32 +214,20 @@
    
 	
 	if (save) {
-        NSLog(@"so this is always called?");
-		/*
-		 The new book is associated with the add controller's managed object context.
-		 This is good because it means that any edits that are made don't affect the application's main managed object context -- it's a way of keeping disjoint edits in a separate scratchpad -- but it does make it more difficult to get the new book registered with the fetched results controller.
-		 First, you have to save the new book.  This means it will be added to the persistent store.  Then you can retrieve a corresponding managed object into the application delegate's context.  Normally you might do this using a fetch or using objectWithID: -- for example
-		 
-		 NSManagedObjectID *newBookID = [controller.book objectID];
-		 NSManagedObject *newBook = [applicationContext objectWithID:newBookID];
-		 
-		 These techniques, though, won't update the fetch results controller, which only observes change notifications in its context.
-		 You don't want to tell the fetch result controller to perform its fetch again because this is an expensive operation.
-		 You can, though, update the main context using mergeChangesFromContextDidSaveNotification: which will emit change notifications that the fetch results controller will observe.
-		 To do this:
-		 1	Register as an observer of the add controller's change notifications
-		 2	Perform the save
-		 3	In the notification method (addControllerContextDidSave:), merge the changes
-		 4	Unregister as an observer
-		 */
+       
 		NSNotificationCenter *dnc = [NSNotificationCenter defaultCenter];
 		[dnc addObserver:self selector:@selector(addControllerContextDidSave:) name:NSManagedObjectContextDidSaveNotification object:addingManagedObjectContext];
 		
 		NSError *error;
 		if (![addingManagedObjectContext save:&error]) {
 			// Update to handle the error appropriately.
+            /*
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-			exit(-1);  // Fail
+			UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
+            [alertView show];
+            [alertView release];
+             */
+            //exit(-1);  // Fail
 		}
 		[dnc removeObserver:self name:NSManagedObjectContextDidSaveNotification object:addingManagedObjectContext];
 	}
@@ -273,8 +269,8 @@
 	
 	// Create the sort descriptors array.
 	NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
-	NSSortDescriptor *imageDescriptor = [[NSSortDescriptor alloc] initWithKey:@"imagePath" ascending:YES];
-	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:nameDescriptor, imageDescriptor, nil];
+	//NSSortDescriptor *imageDescriptor = [[NSSortDescriptor alloc] initWithKey:@"imagePath" ascending:YES];
+	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:nameDescriptor,nil]; //imageDescriptor, nil];
 	[fetchRequest setSortDescriptors:sortDescriptors];
 	
 	// Create and initialize the fetch results controller.
@@ -286,7 +282,7 @@
 	[aFetchedResultsController release];
 	[fetchRequest release];
 	[nameDescriptor release];
-	[imageDescriptor release];
+	//[imageDescriptor release];
 	[sortDescriptors release];
 	
 	return fetchedResultsController;
@@ -350,6 +346,7 @@
 }
 
 
+/*
 
 - (void) dataTest {
     NSManagedObjectContext *context = [self managedObjectContext];
@@ -387,4 +384,5 @@
     [fetchRequest release];
     
 }
+ */
 @end

@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  SoundImageLite
+
+  Created by Liangjun Jiang on 5/23/11.
+  Copyright 2011 LjSport Apps. All rights reserved.
+*/
+"FINE"	=	"좋아";
+"OK"	=	"확인";
+"NEW" = "New";
+"ADD"	=	"추가";
+"EDIT"	=	"편집";
+"RECORD"	=	"레코드";
+"PLAY"	=	"재생";
+"TEST"	=	"테스트";
+"NAME"	=	"이름";
+"IMAGE"	=	"이미지";
+"SOUND"	=	"소리";
+"VOICE"	=	"음성";
+"DONE"	=	"완료";
+"SAVE"	=	"저장";
+"CANCEL"	=	"취소";
+"NOFUN"	=	"이것은 재미 없다";
+"ENTERNAME"	=	"이름을 입력하십시오";
+"STOP"	=	"그만하세요";
+"HINT"	=	"당신의 선택은 여기에 표시됩니다";
+"RECORDHINT"	=	"당신은 자신을 기록할 수";
+"INFO"	=	"정보";

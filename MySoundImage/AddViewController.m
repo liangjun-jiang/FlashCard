@@ -40,22 +40,22 @@
 {
     [super viewDidLoad];
    
-    self.title = @"New";
+    self.title = NSLocalizedString(@"NEW", @"");
     
     // Configure the save button.
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save:)];
     self.navigationItem.rightBarButtonItem = saveButton;
     
     // Configure the cancel button.
-    UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
-    self.navigationItem.leftBarButtonItem = cancelButton;
-    
+    //UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+    //self.navigationItem.leftBarButtonItem = cancelButton;
+    //self.navigationItem.leftBarButtonItem.enabled = NO;
     [saveButton release];
-    [cancelButton release];
+    //[cancelButton release];
     
-   
-    [self setUpUndoManager];
     self.editing = YES;
+    [self setUpUndoManager];
+   
   
 }
 

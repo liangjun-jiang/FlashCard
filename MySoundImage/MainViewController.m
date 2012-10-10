@@ -35,7 +35,7 @@
 -(void) handleLongPress:(UILongPressGestureRecognizer *)sender{
     if (!self.alertInProgress){
         self.alertInProgress = YES;
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Warning!" message:@"this is not fun." delegate:self cancelButtonTitle:@"Fine." otherButtonTitles:nil];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
         [alertView show];
         [alertView release];
     }

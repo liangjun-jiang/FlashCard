@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundles</key>
+	<array>
+		<dict>
+			<key>associated Xcode projects</key>
+			<array>
+				<string>../../../SoundImageLite.xcodeproj</string>
+			</array>
+			<key>change date</key>
+			<date>2001-01-01T00:00:00Z</date>
+			<key>class</key>
+			<string>BLBundleObject</string>
+			<key>errors</key>
+			<array/>
+			<key>files</key>
+			<array>
+				<dict>
+					<key>attachments</key>
+					<dict>
+						<key>backup</key>
+						<dict>
+							<key>1</key>
+							<dict>
+								<key>class</key>
+								<string>BLWrapperHandle</string>
+								<key>name</key>
+								<string>MySoundImage/MainWindow/1/MainWindow.xib</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>change date</key>
+					<date>2011-04-28T00:45:38Z</date>
+					<key>class</key>
+					<string>BLNibFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>fc197287fa1da04a720376c8ae50ba6e
+</string>
+					<key>name</key>
+					<string>MainWindow.xib</string>
+					<key>objects</key>
+					<array/>
+					<key>snapshots</key>
+					<dict/>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict>
+						<key>backup</key>
+						<dict>
+							<key>1</key>
+							<dict>
+								<key>class</key>
+								<string>BLWrapperHandle</string>
+								<key>name</key>
+								<string>MySoundImage/InfoPlist/1/InfoPlist.strings</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>change date</key>
+					<date>2011-04-27T19:52:40Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>b8f0b99a609bda18c49eed43bb052224
+</string>
+					<key>name</key>
+					<string>InfoPlist.strings</string>
+					<key>objects</key>
+					<array/>
+					<key>plist file</key>
+					<false/>
+					<key>snapshots</key>
+					<dict/>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+				<dict>
+					<key>attachments</key>
+					<dict>
+						<key>backup</key>
+						<dict>
+							<key>1</key>
+							<dict>
+								<key>class</key>
+								<string>BLWrapperHandle</string>
+								<key>name</key>
+								<string>MySoundImage/Localizable/1/Localizable.strings</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>change date</key>
+					<date>2011-05-23T21:30:26Z</date>
+					<key>class</key>
+					<string>BLStringsFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>b5b39c590aaf5eb42fa13f1e3c5b5200
+</string>
+					<key>name</key>
+					<string>Localizable.strings</string>
+					<key>objects</key>
+					<array>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>FINE</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Fine</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>OK</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>OK</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>ADD</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Add</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>EDIT</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Edit</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>RECORD</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Record</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>PLAY</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Play</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>TEST</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Test</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>NAME</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Name</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>IMAGE</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Image</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>SOUND</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Sound</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>VOICE</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Voice</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>DONE</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Done</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>SAVE</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Save</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>CANCEL</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Cancel</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>NOFUN</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>This is no fun</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>ENTERNAME</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Enter a name</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>STOP</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Stop</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>HINT</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Your selection will appear here</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>RECORDHINT</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>You can record your own</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+						<dict>
+							<key>change date</key>
+							<date>2001-01-01T00:00:00Z</date>
+							<key>class</key>
+							<string>BLStringKeyObject</string>
+							<key>comment</key>
+							<string>Localizable.strings
+ SoundImageLite
+
+ Created by Liangjun Jiang on 5/23/11.
+ Copyright 2011 LjSport Apps. All rights reserved.</string>
+							<key>errors</key>
+							<array/>
+							<key>flags</key>
+							<integer>0</integer>
+							<key>key</key>
+							<string>INFO</string>
+							<key>localizations</key>
+							<dict>
+								<key>en</key>
+								<string>Info</string>
+							</dict>
+							<key>snapshots</key>
+							<dict/>
+						</dict>
+					</array>
+					<key>plist file</key>
+					<false/>
+					<key>snapshots</key>
+					<dict/>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</array>
+			<key>flags</key>
+			<integer>0</integer>
+			<key>name</key>
+			<string>..</string>
+			<key>naming style</key>
+			<integer>1</integer>
+			<key>referencing style</key>
+			<integer>1</integer>
+			<key>user name</key>
+			<string>MySoundImage</string>
+		</dict>
+		<dict>
+			<key>associated Xcode projects</key>
+			<array>
+				<string>../../SoundImageLite.xcodeproj</string>
+			</array>
+			<key>change date</key>
+			<date>2001-01-01T00:00:00Z</date>
+			<key>class</key>
+			<string>BLBundleObject</string>
+			<key>errors</key>
+			<array/>
+			<key>files</key>
+			<array>
+				<dict>
+					<key>attachments</key>
+					<dict>
+						<key>backup</key>
+						<dict>
+							<key>1</key>
+							<dict>
+								<key>class</key>
+								<string>BLWrapperHandle</string>
+								<key>name</key>
+								<string>iPad/MainWindow-iPad/1/MainWindow-iPad.xib</string>
+							</dict>
+						</dict>
+					</dict>
+					<key>change date</key>
+					<date>2011-04-27T19:52:58Z</date>
+					<key>class</key>
+					<string>BLNibFileObject</string>
+					<key>errors</key>
+					<array/>
+					<key>flags</key>
+					<integer>1</integer>
+					<key>hash</key>
+					<string>045cc687a7d43c5560470ebd99836a8c
+</string>
+					<key>name</key>
+					<string>MainWindow-iPad.xib</string>
+					<key>objects</key>
+					<array/>
+					<key>snapshots</key>
+					<dict/>
+					<key>versions</key>
+					<dict>
+						<key>en</key>
+						<string>1</string>
+					</dict>
+				</dict>
+			</array>
+			<key>flags</key>
+			<integer>0</integer>
+			<key>name</key>
+			<string>../iPad</string>
+			<key>naming style</key>
+			<integer>1</integer>
+			<key>referencing style</key>
+			<integer>1</integer>
+			<key>user name</key>
+			<string>iPad</string>
+		</dict>
+	</array>
+	<key>languages</key>
+	<array>
+		<string>en</string>
+		<string>fr</string>
+	</array>
+	<key>preferences</key>
+	<dict/>
+	<key>reference language</key>
+	<string>en</string>
+	<key>supports preview</key>
+	<true/>
+	<key>version</key>
+	<integer>4</integer>
+</dict>
+</plist>

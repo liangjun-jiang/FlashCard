@@ -36,7 +36,7 @@
 - (IBAction)done:(id)sender;
 - (IBAction)add:(id)sender;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
-- (void)dataTest;
+//- (void)dataTest;
 
 @end
 

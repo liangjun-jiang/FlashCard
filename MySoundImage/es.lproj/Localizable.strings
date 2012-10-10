@@ -1,0 +1,28 @@
+/* 
+  Localizable.strings
+  SoundImageLite
+
+  Created by Liangjun Jiang on 5/23/11.
+  Copyright 2011 LjSport Apps. All rights reserved.
+*/
+"FINE"	=	"Bien";
+"OK"	=	"OK ";
+"NEW" = "New";
+"ADD"	=	"Añadir";
+"EDIT"	=	"Editar";
+"RECORD"	=	"Grabar";
+"PLAY"	=	"Play";
+"TEST"	=	"Prueba";
+"NAME"	=	"Nombre";
+"IMAGE"	=	"Imagen";
+"SOUND"	=	"Sonido";
+"VOICE"	=	"La Voz";
+"DONE"	=	"Hecho";
+"SAVE"	=	"Guardar";
+"CANCEL"	=	"Cancelar";
+"NOFUN"	=	"Esto no es divertido";
+"ENTERNAME"	=	"Escriba un nombre";
+"STOP"	=	"Stop ";
+"HINT"	=	"Su selección aparecerá aquí";
+"RECORDHINT"	=	"Usted puede grabar su propia";
+"INFO"	=	"Información";

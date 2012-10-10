@@ -172,7 +172,7 @@
     //AddViewController *addViewController = [[AddViewController alloc] initWithStyle:UITableViewStyleGrouped];
     AddViewController *addViewController = [[AddViewController alloc] initWithNibName:@"DetailView" bundle:nil];
     addViewController.delegate = self;
-
+    
     //create a new managed object for the new sound Image - set its persistent store cooridinator to the same as the from the fetched results controller;
     
     //NSManagedObjectContext *addingContext = [[NSManagedObjectContext alloc] init];    
@@ -184,10 +184,20 @@
     //[addingManagedObjectContext setPersistentStoreCoordinator:[[fetchedResultController managedObjectContext] persistentStoreCoordinator]];
    
     addViewController.soundImage = (SoundImage *)[NSEntityDescription insertNewObjectForEntityForName:@"SoundImage" inManagedObjectContext:addingContext];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addViewController];
-    [self.navigationController presentModalViewController:navigationController animated:YES];
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:addViewController];
+    //navController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:navController animated:YES];
+    
+    addViewController.navController = navController;
+    navController.navigationBar.barStyle = UIBarStyleBlackOpaque;
+    
+    //UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addViewController];
+    //[self.navigationController presentModalViewController:navigationController animated:YES];
+    
+    [navController release];
     [addViewController release];
-    [navigationController release];
+    //[navigationController release];
     
 }
 

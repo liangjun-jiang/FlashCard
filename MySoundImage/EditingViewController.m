@@ -11,12 +11,16 @@
 #import "EditingViewController.h"
 #import "PhotoViewController.h"
 
+@interface EditingViewController (PrivateMethods)
+- (void)updatePhotoButton;
+@end
+
 #define DOCUMENTS_FOLDER [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
 
 @implementation EditingViewController
 
-@synthesize textField, editedObject, editedFieldKey, editedFieldName, editingTitle, editingImage, editingSound, editingVoice, soundPicker,photoButton, recordButton, sounds, statusLabel, recorder, audioPlayer, playButton, stopButton, stopPlayerButton, photoImageView;
-//@synthesize placeHolder=_placeHolder;
+@synthesize textField, editedObject, editedFieldKey, editedFieldName, editingTitle, editingImage, editingSound, editingVoice, soundPicker,photoButton, recordButton, sounds, statusLabel, recorder, audioPlayer, playButton, stopButton, stopPlayerButton, photoImageView, saveButton,cancelButton;
+
 
 
 - (void)dealloc
@@ -51,16 +55,18 @@
     self.title = editedFieldName;
     
     // Configure the save and cancel buttons.
-	UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave target:self action:@selector(save)];
+	
+    saveButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"SAVE", @"") style:UIBarButtonSystemItemSave target:self action:@selector(save)];
 	self.navigationItem.rightBarButtonItem = saveButton;
+    self.navigationItem.rightBarButtonItem.enabled = NO;
 	[saveButton release];
 	
-	UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
+	cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"CANCEL", @"") style:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
 	self.navigationItem.leftBarButtonItem = cancelButton;
+    
 	[cancelButton release];
     
     sounds = [[NSMutableArray alloc] init];
-    //self.placeHolder = editedFieldName;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -80,30 +86,24 @@
         textField.hidden = NO;
         textField.text = [editedObject valueForKey:editedFieldKey];
         textField.placeholder = self.title;
+       
         [textField becomeFirstResponder];
     }
     else if(editingImage){
         textField.hidden = NO;
-        textField.placeholder=@"Enter an image name";
+        textField.placeholder=NSLocalizedString(@"ENTERNAME", @"");
         [textField becomeFirstResponder];
         photoButton.hidden = NO;
-        /*
-        photoImageView.hidden = YES;
-        photoImageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].applicationFrame];
-        photoImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        photoImageView.contentMode = UIViewContentModeScaleAspectFit;
-        photoImageView.backgroundColor = [UIColor blackColor];
-        photoImageView.image = [UIImage imageNamed:[self fileNameBuilder]];
-         */
+       
     } else if(editingSound){
-        textField.placeholder=@"Your selection will be appeared here";
+        textField.placeholder=NSLocalizedString(@"HINT", @"");
         textField.enabled = NO;
         [self initSounds];
         soundPicker.hidden = NO;
     } else if (editingVoice){
             
         textField.hidden = NO;
-        textField.placeholder = @"Enter a voice name";
+        textField.placeholder = NSLocalizedString(@"ENTERNAME", @"");
         [textField becomeFirstResponder];
         recordButton.hidden =NO;
         recordButton.enabled = NO;
@@ -137,7 +137,8 @@
 	
     // Pass current value to the edited object, then pop.
     [editedObject setValue:[self fileNameBuilder] forKey:editedFieldKey];
-            
+    
+    
     [self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -157,6 +158,7 @@
     imagePicker.delegate = self;
     [self presentModalViewController:imagePicker animated:YES];
     [imagePicker release];
+    
 }
 
 
@@ -181,12 +183,16 @@
 	[selectedImage drawInRect:rect];
     [UIImagePNGRepresentation(UIGraphicsGetImageFromCurrentImageContext()) writeToFile:thumbNailPath atomically:YES];
     UIGraphicsEndImageContext();
+        
+
     [self dismissModalViewControllerAnimated:YES];
 }
+
 /*
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info{
     
-    
+     [photoButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@-thumbNail.png",DOCUMENTS_FOLDER, textField.text]] forState:UIControlStateNormal];      
 }
 */
 
@@ -194,15 +200,37 @@
     [self dismissModalViewControllerAnimated:YES];
 }
 
-
+/* todo:
 - (void)updatePhotoButton {
-    //[photoButton setImage:[UIImage imageNamed:[self pathBuilder]] forState:UIControlStateNormal];
-	
-}
+    
+  
+	 How to present the photo button depends on the editing state and whether the recipe has a thumbnail image.
+	 * If the recipe has a thumbnail, set the button's highlighted state to the same as the editing state (it's highlighted if editing).
+	 * If the recipe doesn't have a thumbnail, then: if editing, enable the button and show an image that says "Choose Photo" or similar; if not editing then disable the button and show nothing.  
+	 
+    
+    BOOL editing = self.editing;
+    
+    if ([UIImage imageNamed:[NSString stringWithFormat:@"%@/%@-thumbNail.png",DOCUMENTS_FOLDER, textField.text]]!=nil)
+        photoButton.highlighted = editing;
+    else{
+        NSLog(@"so u r called?");
+        photoButton.enabled = editing;
+    
+    if (self.editing) {
+			[photoButton setImage:[UIImage imageNamed:@"choosePhoto.png"] forState:UIControlStateNormal];
+		} else {
+            [photoButton setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@/%@-thumbNail.png",DOCUMENTS_FOLDER, textField.text]] forState:UIControlStateNormal];  
+        }
+    }
+  
+   }
+  */
 
 - (IBAction)record:(id)sender {
     [recorder stop];
     [self initRecorder];
+    
     //self.statusLabel.text = @"I am recording.";
     [recorder record];
     textField.enabled = NO;
@@ -211,7 +239,7 @@
 }
 
 - (IBAction)stop:(id)sender{
-    statusLabel.text = @"Stopped.";
+    //tatusLabel.text = NSLocalizedString(@"STOP",@"");
     [recorder stop];
     playButton.hidden = NO;
     stopButton.hidden = YES;
@@ -256,7 +284,7 @@
     if ([sounds count] != 0)
         textField.text = [sounds objectAtIndex:row];
     else
-        textField.text = @"You can record your own sound";
+        textField.text = NSLocalizedString(@"RECORD HINT", @"");
 }
 
 #pragma mark -
@@ -275,10 +303,10 @@
     if(!recorder){
         NSLog(@"recorder: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
         UIAlertView *alert =
-        [[UIAlertView alloc] initWithTitle: @"Warning"
+        [[UIAlertView alloc] initWithTitle: NSLocalizedString(@"WARNING", @"")
                                    message: [err localizedDescription]
                                   delegate: nil
-                         cancelButtonTitle:@"OK"
+                         cancelButtonTitle:NSLocalizedString(@"OK", @"")
                          otherButtonTitles:nil];
         [alert show];
         [alert release];
@@ -293,7 +321,9 @@
     recordButton.enabled = YES;
 	[txField resignFirstResponder];
     txField.enabled = NO;
-    //self.placeHolder = [NSString stringWithFormat:@"%@", txField.text];
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    self.navigationItem.rightBarButtonItem.style = true;
+    
     return YES;
 }
 
@@ -335,6 +365,8 @@
         if (textRange.location != NSNotFound)
             [sounds addObject:[NSString stringWithFormat:@"%@", eachFile]];
     }
+    
+    self.navigationItem.rightBarButtonItem.enabled=YES;
     
     [filesInDoc release];
     return sounds;

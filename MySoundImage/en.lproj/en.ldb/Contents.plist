@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundles</key>
+	<array/>
+	<key>languages</key>
+	<array/>
+	<key>preferences</key>
+	<dict>
+		<key>XcodeAddMissingFiles</key>
+		<true/>
+		<key>XcodeFileLimit</key>
+		<real>75</real>
+		<key>XcodeHasFileLimit</key>
+		<true/>
+		<key>XcodeHasLanguageLimit</key>
+		<true/>
+		<key>XcodeLanguageLimit</key>
+		<real>90</real>
+		<key>XcodeRemoveNotMatchingFiles</key>
+		<false/>
+		<key>autotranslateNewStrings</key>
+		<true/>
+		<key>compressLocalizationFiles</key>
+		<false/>
+		<key>deactivateEmptyStrings</key>
+		<true/>
+		<key>defaultBundleNaming</key>
+		<integer>1</integer>
+		<key>defaultBundleReferencing</key>
+		<integer>1</integer>
+		<key>embedDictionary</key>
+		<false/>
+		<key>embedDictionaryGuesses</key>
+		<false/>
+		<key>importEmptyStrings</key>
+		<true/>
+		<key>includeInterfacePreview</key>
+		<true/>
+		<key>markAutotranslatedAsNotChanged</key>
+		<true/>
+		<key>saveCompressed</key>
+		<false/>
+		<key>updateXcodeProjects</key>
+		<false/>
+		<key>valueChangesResetStrings</key>
+		<false/>
+	</dict>
+	<key>version</key>
+	<integer>5</integer>
+</dict>
+</plist>
