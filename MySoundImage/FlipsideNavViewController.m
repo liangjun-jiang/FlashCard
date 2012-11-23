@@ -27,13 +27,6 @@
 }
 
 
-- (void)dealloc
-{   
-    [_navController release];
-    [managedObjectContext release];
-    [fetchedResultsController release];
-    [super dealloc];
-}
 
 #pragma mark - View lifecycle
 
@@ -49,8 +42,6 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(add:)];
     self.navigationItem.rightBarButtonItem = addButton;
     
-    [doneButton release];
-    [addButton release];
     
     
     NSError *error;
@@ -60,7 +51,6 @@
 		
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
         [alertView show];
-        [alertView release];
         //exit(-1);  // Fail
 	}
 }
@@ -97,7 +87,7 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 	
-	id <NSFetchedResultsSectionInfo> sectionInfo = [[fetchedResultsController sections] objectAtIndex:section];
+	id <NSFetchedResultsSectionInfo> sectionInfo = [fetchedResultsController sections][section];
 	return [sectionInfo numberOfObjects];
 }
 
@@ -109,7 +99,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
     
     // Configure the cell.
@@ -148,7 +138,6 @@
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
             [alertView show];
-            [alertView release];
 			//exit(-1);  // Fail
 		}
     }   
@@ -166,7 +155,6 @@
     // Pass the selected book to the new view controller.
     detailViewController.soundImage = selectedSoundImage;
 	[self.navigationController pushViewController:detailViewController animated:YES];
-	[detailViewController release];
 }
 
 
@@ -192,7 +180,6 @@
     NSManagedObjectContext *addingContext = [self managedObjectContext];
     
     //self.addingManagedObjectContext = addingContext;
-    [addingContext release];
     
     //[addingManagedObjectContext setPersistentStoreCoordinator:[[fetchedResultController managedObjectContext] persistentStoreCoordinator]];
     
@@ -202,8 +189,6 @@
     navControllerWithAddView.navigationBar.barStyle = UIBarStyleBlackOpaque;
     addViewController.navController = navControllerWithAddView;
     
-    [addViewController release];
-    [navControllerWithAddView release];
     
 }
 
@@ -270,7 +255,7 @@
 	// Create the sort descriptors array.
 	NSSortDescriptor *nameDescriptor = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
 	//NSSortDescriptor *imageDescriptor = [[NSSortDescriptor alloc] initWithKey:@"imagePath" ascending:YES];
-	NSArray *sortDescriptors = [[NSArray alloc] initWithObjects:nameDescriptor,nil]; //imageDescriptor, nil];
+	NSArray *sortDescriptors = @[nameDescriptor]; //imageDescriptor, nil];
 	[fetchRequest setSortDescriptors:sortDescriptors];
 	
 	// Create and initialize the fetch results controller.
@@ -279,11 +264,7 @@
 	fetchedResultsController.delegate = self;
 	
 	// Memory management.
-	[aFetchedResultsController release];
-	[fetchRequest release];
-	[nameDescriptor release];
 	//[imageDescriptor release];
-	[sortDescriptors release];
 	
 	return fetchedResultsController;
 }    
@@ -306,11 +287,11 @@
 	switch(type) {
 			
 		case NSFetchedResultsChangeInsert:
-			[tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+			[tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
 			break;
 			
 		case NSFetchedResultsChangeDelete:
-			[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+			[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
 			break;
 			
 		case NSFetchedResultsChangeUpdate:
@@ -318,8 +299,8 @@
 			break;
 			
 		case NSFetchedResultsChangeMove:
-			[tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-            [tableView insertRowsAtIndexPaths:[NSArray arrayWithObject:newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
+			[tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [tableView insertRowsAtIndexPaths:@[newIndexPath] withRowAnimation:UITableViewRowAnimationFade];
 			break;
 	}
 }

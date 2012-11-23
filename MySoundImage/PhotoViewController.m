@@ -38,9 +38,4 @@
 }
 
 
-- (void)dealloc {
-    [imageView release];
-    [soundImage release];
-    [super dealloc];
-}
 @end

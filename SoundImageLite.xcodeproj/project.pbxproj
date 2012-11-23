@@ -107,6 +107,7 @@
 		D6C0E9FF138AE7CE007ECE6E /* pingpong.wav in Resources */ = {isa = PBXBuildFile; fileRef = D6C0E9FE138AE7CE007ECE6E /* pingpong.wav */; };
 		D6C0EA09138AEC87007ECE6E /* icon-57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C0EA08138AEC87007ECE6E /* icon-57x57.png */; };
 		D6C0EA0B138AECA9007ECE6E /* icon-114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = D6C0EA0A138AECA9007ECE6E /* icon-114x114.png */; };
+		D6E15119165FDED8003F8147 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D6E15118165FDED8003F8147 /* Default-568h@2x.png */; };
 		D6FF05EF136B3A380083C324 /* FlipsideNavView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D6FF05ED136B3A380083C324 /* FlipsideNavView.xib */; };
 /* End PBXBuildFile section */
 
@@ -228,6 +229,7 @@
 		D6C0E9FE138AE7CE007ECE6E /* pingpong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pingpong.wav; sourceTree = "<group>"; };
 		D6C0EA08138AEC87007ECE6E /* icon-57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-57x57.png"; path = "../icon-57x57.png"; sourceTree = "<group>"; };
 		D6C0EA0A138AECA9007ECE6E /* icon-114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-114x114.png"; path = "../icon-114x114.png"; sourceTree = "<group>"; };
+		D6E15118165FDED8003F8147 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D6FF05EB136B3A380083C324 /* FlipsideNavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipsideNavViewController.h; sourceTree = "<group>"; };
 		D6FF05ED136B3A380083C324 /* FlipsideNavView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FlipsideNavView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -301,6 +303,7 @@
 		D685FEF01368AB88001FCA98 = {
 			isa = PBXGroup;
 			children = (
+				D6E15118165FDED8003F8147 /* Default-568h@2x.png */,
 				D685FF071368AB88001FCA98 /* MySoundImage */,
 				D685FEFE1368AB88001FCA98 /* Frameworks */,
 				D685FEFC1368AB88001FCA98 /* Products */,
@@ -515,6 +518,7 @@
 		D685FEF21368AB88001FCA98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "LjSport Apps";
 			};
 			buildConfigurationList = D685FEF51368AB88001FCA98 /* Build configuration list for PBXProject "SoundImageLite" */;
@@ -629,6 +633,7 @@
 				D6C0EA0B138AECA9007ECE6E /* icon-114x114.png in Resources */,
 				D6396025138AFEFF007BF2D0 /* Localizable.strings in Resources */,
 				D68E9D8A139DD7EE007E393A /* basketball.jpg in Resources */,
+				D6E15119165FDED8003F8147 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -726,7 +731,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "Sound Image";
 				PROVISIONING_PROFILE = "C1527212-54E5-4A53-BBE6-07495AC42831";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B86C3A48-1E8D-4C69-86A3-DE0BF9662D5E";
@@ -744,7 +749,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "Sound Image";
 				PROVISIONING_PROFILE = "C1527212-54E5-4A53-BBE6-07495AC42831";
@@ -757,11 +762,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Sound Image";
@@ -775,10 +782,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Sound Image";
@@ -799,7 +808,7 @@
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "Sound Image";
 				PROVISIONING_PROFILE = "C1527212-54E5-4A53-BBE6-07495AC42831";
@@ -812,10 +821,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MySoundImage/MySoundImage-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "MySoundImage/MySoundImage-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "Sound Image";

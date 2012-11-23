@@ -15,11 +15,6 @@
 @implementation AddViewController
 @synthesize delegate;
 @synthesize navController=_navController;
-- (void)dealloc
-{
-    [_navController release];
-    [super dealloc];
-}
 
 
 
@@ -50,7 +45,6 @@
     //UIBarButtonItem *cancelButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
     //self.navigationItem.leftBarButtonItem = cancelButton;
     //self.navigationItem.leftBarButtonItem.enabled = NO;
-    [saveButton release];
     //[cancelButton release];
     
     self.editing = YES;

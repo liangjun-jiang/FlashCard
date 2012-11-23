@@ -49,34 +49,34 @@
     
 }
 
-@property (nonatomic, retain) IBOutlet UITextField *textField;
+@property (nonatomic, strong) IBOutlet UITextField *textField;
 
-@property (nonatomic, retain) NSManagedObject *editedObject;
-@property (nonatomic, retain) NSString *editedFieldKey;
-@property (nonatomic, retain) NSString *editedFieldName;
+@property (nonatomic, strong) NSManagedObject *editedObject;
+@property (nonatomic, strong) NSString *editedFieldKey;
+@property (nonatomic, strong) NSString *editedFieldName;
 @property (nonatomic, assign, getter=isEditingImage) BOOL editingImage;
 @property (nonatomic, assign, getter=isEditingSound) BOOL editingSound;
 @property (nonatomic, assign, getter=isEditingVoice) BOOL editingVoice;
 @property (nonatomic, assign, getter=isEditingTitle) BOOL editingTitle;
 
-@property (nonatomic, retain) IBOutlet UIPickerView *soundPicker;
-@property (nonatomic, retain) IBOutlet UIButton *photoButton;
-@property (nonatomic, retain) IBOutlet UIButton *recordButton;
-@property (nonatomic, retain) IBOutlet UILabel *statusLabel;
-@property (nonatomic, retain) IBOutlet UIButton *playButton;
-@property (nonatomic, retain) IBOutlet UIButton *stopButton;
-@property (nonatomic, retain) IBOutlet UIButton *stopPlayerButton;
-@property (nonatomic, retain) IBOutlet UIImageView *photoImageView;
+@property (nonatomic, strong) IBOutlet UIPickerView *soundPicker;
+@property (nonatomic, strong) IBOutlet UIButton *photoButton;
+@property (nonatomic, strong) IBOutlet UIButton *recordButton;
+@property (nonatomic, strong) IBOutlet UILabel *statusLabel;
+@property (nonatomic, strong) IBOutlet UIButton *playButton;
+@property (nonatomic, strong) IBOutlet UIButton *stopButton;
+@property (nonatomic, strong) IBOutlet UIButton *stopPlayerButton;
+@property (nonatomic, strong) IBOutlet UIImageView *photoImageView;
 
-@property (nonatomic, retain) UIBarButtonItem *cancelButton;
-@property (nonatomic, retain) UIBarButtonItem *saveButton;
+@property (nonatomic, strong) UIBarButtonItem *cancelButton;
+@property (nonatomic, strong) UIBarButtonItem *saveButton;
 //@property (nonatomic, retain) NSString *placeHolder;
 
 
-@property (nonatomic, retain) NSMutableArray *sounds;
+@property (nonatomic, strong) NSMutableArray *sounds;
 
-@property (nonatomic, retain) AVAudioRecorder *recorder;
-@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
+@property (nonatomic, strong) AVAudioRecorder *recorder;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
 
 - (IBAction) cancel;
 - (IBAction) save;
@@ -87,7 +87,7 @@
 - (IBAction) stopPlayer:(id)sender;
 
 - (void) initRecorder;
-- (NSMutableArray *)initSounds;
+//- (NSMutableArray *)obtainAllSounds;
 - (NSString *) pathBuilder;
 - (NSString *) fileNameBuilder;
 

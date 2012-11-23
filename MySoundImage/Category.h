@@ -13,7 +13,7 @@
 @interface Category : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSManagedObject * category;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSManagedObject * category;
 
 @end

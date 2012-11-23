@@ -23,27 +23,6 @@
 
 
 
-- (void)dealloc
-{
-  
-    [recorder release];
-    [audioPlayer release];
-    [sounds release];
-    [statusLabel release];
-    [photoButton release];
-    [recordButton release];
-    [playButton release];
-    [stopButton release];
-    [stopPlayerButton release];
-    [soundPicker release];
-    [textField release];
-    [editedObject release];
-    [editedFieldKey release];
-    [editedFieldName release];
-    [photoImageView release];
-   
-    [super dealloc];
-}
 
 
 #pragma mark - View lifecycle
@@ -59,12 +38,10 @@
     saveButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"SAVE", @"") style:UIBarButtonSystemItemSave target:self action:@selector(save)];
 	self.navigationItem.rightBarButtonItem = saveButton;
     self.navigationItem.rightBarButtonItem.enabled = NO;
-	[saveButton release];
 	
 	cancelButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"CANCEL", @"") style:UIBarButtonSystemItemCancel target:self action:@selector(cancel)];
 	self.navigationItem.leftBarButtonItem = cancelButton;
     
-	[cancelButton release];
     
     sounds = [[NSMutableArray alloc] init];
 }
@@ -98,7 +75,8 @@
     } else if(editingSound){
         textField.placeholder=NSLocalizedString(@"HINT", @"");
         textField.enabled = NO;
-        [self initSounds];
+//        [self initSounds];
+//        [self obtainAllSounds];
         soundPicker.hidden = NO;
     } else if (editingVoice){
             
@@ -157,7 +135,6 @@
      UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
     imagePicker.delegate = self;
     [self presentModalViewController:imagePicker animated:YES];
-    [imagePicker release];
     
 }
 
@@ -277,12 +254,12 @@
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component{
-    return [sounds objectAtIndex:row];
+    return sounds[row];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component{
     if ([sounds count] != 0)
-        textField.text = [sounds objectAtIndex:row];
+        textField.text = sounds[row];
     else
         textField.text = NSLocalizedString(@"RECORD HINT", @"");
 }
@@ -293,12 +270,11 @@
 - (void) initRecorder{
     NSError *err;
     
-    NSDictionary *recordSettings = [[NSDictionary alloc] initWithObjectsAndKeys:[NSNumber  numberWithFloat:44100.0], AVSampleRateKey,
-                                    [NSNumber numberWithInt:kAudioFormatAppleLossless], AVFormatIDKey,
-                                    [NSNumber numberWithInt:1], AVNumberOfChannelsKey,
-                                    [NSNumber numberWithInt:AVAudioQualityMax], AVEncoderAudioQualityKey, nil];
+    NSDictionary *recordSettings = @{AVSampleRateKey: @44100.0f,
+                                    AVFormatIDKey: @(kAudioFormatAppleLossless),
+                                    AVNumberOfChannelsKey: @1,
+                                    AVEncoderAudioQualityKey: @(AVAudioQualityMax)};
     recorder = [[AVAudioRecorder alloc] initWithURL:[NSURL fileURLWithPath:[self pathBuilder]] settings:recordSettings error:&err];
-    [recordSettings release];
        
     if(!recorder){
         NSLog(@"recorder: %@ %d %@", [err domain], [err code], [[err userInfo] description]);
@@ -309,7 +285,6 @@
                          cancelButtonTitle:NSLocalizedString(@"OK", @"")
                          otherButtonTitles:nil];
         [alert show];
-        [alert release];
         return;
     }
     
@@ -350,26 +325,28 @@
     return name;
 }
 
-- (NSArray *)initSounds{
-    
-    NSError *error;
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    NSString *documentsDirectory = [NSHomeDirectory()
-                                    stringByAppendingPathComponent:@"Documents"];
-    NSArray *filesInDoc =[[NSArray alloc] initWithArray:[fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error] ];
-    
-    NSRange textRange;
-    NSString *eachFile;
-    for (eachFile in filesInDoc){
-        textRange = [eachFile rangeOfString:@".caf"];
-        if (textRange.location != NSNotFound)
-            [sounds addObject:[NSString stringWithFormat:@"%@", eachFile]];
-    }
-    
-    self.navigationItem.rightBarButtonItem.enabled=YES;
-    
-    [filesInDoc release];
-    return sounds;
-}
+//- (NSMutbleArray *)obtainAllSounds{
+//    
+//    NSError *error;
+//    NSFileManager *fileMgr = [NSFileManager defaultManager];
+//    NSString *documentsDirectory = [NSHomeDirectory()
+//                                    stringByAppendingPathComponent:@"Documents"];
+//    NSArray *filesInDoc =[[NSArray alloc] initWithArray:[fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error] ];
+//    
+//    NSRange textRange;
+//    NSString *eachFile;
+//    
+//    NSMutableArray *soundsArray = [[NSMutableArray alloc] init];
+//    for (eachFile in filesInDoc){
+//        textRange = [eachFile rangeOfString:@".caf"];
+//        if (textRange.location != NSNotFound)
+//            [soundsArray addObject:[NSString stringWithFormat:@"%@", eachFile]];
+//    }
+//    
+//    self.navigationItem.rightBarButtonItem.enabled=YES;
+//    
+//    [filesInDoc release];
+//    return soundsArray;
+//}
 
 @end

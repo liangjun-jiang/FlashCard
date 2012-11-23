@@ -15,11 +15,11 @@
 @interface SoundImage : NSManagedObject {
 @private
 }
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * soundPath;
-@property (nonatomic, retain) NSString * imagePath;
-@property (nonatomic, retain) NSString * voicePath;
-@property (nonatomic, retain) NSString * comment;
-@property (nonatomic, retain) Category * category;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * soundPath;
+@property (nonatomic, strong) NSString * imagePath;
+@property (nonatomic, strong) NSString * voicePath;
+@property (nonatomic, strong) NSString * comment;
+@property (nonatomic, strong) Category * category;
 
 @end

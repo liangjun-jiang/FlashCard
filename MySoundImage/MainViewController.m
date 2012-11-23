@@ -37,7 +37,6 @@
         self.alertInProgress = YES;
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
         [alertView show];
-        [alertView release];
     }
 }
 
@@ -65,7 +64,7 @@
             break;
         }
     }
-    self.imageView.image = [UIImage imageWithContentsOfFile:[self.imagesArray objectAtIndex:self.index]];
+    self.imageView.image = [UIImage imageWithContentsOfFile:(self.imagesArray)[self.index]];
 }
 
 
@@ -74,10 +73,9 @@
     [self.audioPlayer stop];
     self.index = arc4random() % [self.imagesArray count];
     [self play:self.index];
-    UIImage *tempImage = [[UIImage alloc] initWithContentsOfFile:[self.imagesArray objectAtIndex:self.index]];
+    UIImage *tempImage = [[UIImage alloc] initWithContentsOfFile:(self.imagesArray)[self.index]];
     self.imageView.image = tempImage;//[self scaleAndRotateImage:tempImage];
     
-    [tempImage release];
 }
 
 -(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
@@ -104,23 +102,19 @@
     [self.imageView setUserInteractionEnabled:YES];
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     [self.imageView addGestureRecognizer:tapGesture];
-    [tapGesture release];
     
     UILongPressGestureRecognizer *longpressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];	
     [self.imageView addGestureRecognizer:longpressGesture];
-    [longpressGesture release];
     
     //Listen to the left and right swipe
     UISwipeGestureRecognizer *swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     swipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
     [self.imageView addGestureRecognizer:swipeGesture];
-    [swipeGesture release];
     
     //left
     swipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipe:)];
     swipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
     [self.imageView addGestureRecognizer:swipeGesture];
-    [swipeGesture release];
     
     
 }
@@ -158,8 +152,6 @@
     [self presentModalViewController:controller animated:YES];
     
     
-    [navController release];
-    [controller release];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -188,19 +180,10 @@
     
 }
 
-- (void)dealloc
-{
-    [_flipsideNavViewController release];
-    [_imageView release];
-    [_imagesArray release];
-    [_audioPlayer release];
-    [_managedObjectContext release];
-    [super dealloc];
-}
 
 - (void)play:(int)index
 {
-    NSURL *url = [NSURL fileURLWithPath: [self.soundArray objectAtIndex:index]];
+    NSURL *url = [NSURL fileURLWithPath: (self.soundArray)[index]];
     NSError *err = nil;
     if (url != nil){
         NSData *audioData = [NSData dataWithContentsOfFile:[url path] options: 0 error:&err];
@@ -210,7 +193,7 @@
         self.audioPlayer = [[AVAudioPlayer alloc]initWithData:audioData error:nil];
         self.audioPlayer.delegate = self;
         [self.audioPlayer play];
-        [self.audioPlayer release];
+        self.audioPlayer;
     }
     
 }
@@ -249,7 +232,6 @@
          */
     }     
     //NSLog(@"Images: %@", self.imagesArray);
-    [fetchRequest release];
     
 }
 

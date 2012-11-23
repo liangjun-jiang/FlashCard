@@ -74,15 +74,6 @@
     [self saveContext];
 }
 
-- (void)dealloc
-{
-    [_window release];
-    [__managedObjectContext release];
-    [__managedObjectModel release];
-    [__persistentStoreCoordinator release];
-    [_mainViewController release];
-    [super dealloc];
-}
 
 - (void)awakeFromNib
 {
@@ -107,7 +98,6 @@
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
             [alertView show];
-            [alertView release];
             //abort();
         } 
     }
@@ -195,7 +185,6 @@
         NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
         [alertView show];
-        [alertView release];
         
         //abort();
     }    
@@ -220,7 +209,7 @@
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSError *error;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *documentsDirectory = paths[0];
     NSString *writableDBPath = [documentsDirectory stringByAppendingPathComponent:@"MySoundImage.sqlite"];
     success = [fileManager fileExistsAtPath:writableDBPath];
     if (success) return;
@@ -260,13 +249,11 @@
             }
         }
         
-        [filesInBundle release];
     }
     
    // filesInDoc =[[NSArray alloc] initWithArray:[fileManager contentsOfDirectoryAtPath:documentsDirectory error:&error] ];
    // NSLog(@"files in Documentation %d", [filesInDoc count]);
     
-    [filesInDoc release];
     
 }
 

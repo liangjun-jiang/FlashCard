@@ -18,9 +18,9 @@
    
 }
 
-@property (nonatomic, retain) SoundImage *soundImage;
-@property (nonatomic, retain) NSUndoManager *undoManager;
-@property (nonatomic, retain) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) SoundImage *soundImage;
+@property (nonatomic, strong) NSUndoManager *undoManager;
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
 
 
 -(void)setUpUndoManager;

@@ -26,12 +26,12 @@
 
 
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
-@property (nonatomic, retain) NSManagedObjectContext *addingManagedObjectContext;
-@property (nonatomic, retain) NSFetchedResultsController *fetchedResultsController;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *addingManagedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchedResultsController;
 
-@property (nonatomic, assign) id <FlipsideNavViewControllerDelegate> delegate;
-@property (nonatomic,retain) UINavigationController *navController;
+@property (nonatomic, unsafe_unretained) id <FlipsideNavViewControllerDelegate> delegate;
+@property (nonatomic,strong) UINavigationController *navController;
 
 - (IBAction)done:(id)sender;
 - (IBAction)add:(id)sender;

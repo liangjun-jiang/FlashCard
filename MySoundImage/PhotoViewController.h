@@ -23,7 +23,7 @@
     UIImageView *imageView;
 }
 
-@property(nonatomic, retain) SoundImage *soundImage;
-@property(nonatomic, retain) UIImageView *imageView;
+@property(nonatomic, strong) SoundImage *soundImage;
+@property(nonatomic, strong) UIImageView *imageView;
 
 @end

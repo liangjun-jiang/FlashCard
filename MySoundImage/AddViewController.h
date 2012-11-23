@@ -19,8 +19,8 @@
     
 }
 
-@property (nonatomic, retain) id <AddViewControllerDelegate> delegate;
-@property (nonatomic, retain) IBOutlet UINavigationController *navController;
+@property (nonatomic, strong) id <AddViewControllerDelegate> delegate;
+@property (nonatomic, strong) IBOutlet UINavigationController *navController;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;

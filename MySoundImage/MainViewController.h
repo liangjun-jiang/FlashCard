@@ -29,17 +29,17 @@
 
 - (IBAction)showInfo:(id)sender;
 
-@property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 
-@property (nonatomic, retain) NSFetchedResultsController *fetchResultController;
-@property (nonatomic, retain) NSManagedObjectContext *addingManagedObjectContext;
+@property (nonatomic, strong) NSFetchedResultsController *fetchResultController;
+@property (nonatomic, strong) NSManagedObjectContext *addingManagedObjectContext;
 @property (assign, nonatomic) BOOL alertInProgress;
-@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
 @property (assign, nonatomic) int index;
-@property (nonatomic, retain) NSMutableArray  *imagesArray; 
-@property (nonatomic, retain) NSMutableArray *soundArray;
-@property (nonatomic, retain) AVAudioPlayer *audioPlayer;
-@property (nonatomic, retain) IBOutlet FlipsideNavViewController *flipsideNavViewController;
+@property (nonatomic, strong) NSMutableArray  *imagesArray; 
+@property (nonatomic, strong) NSMutableArray *soundArray;
+@property (nonatomic, strong) AVAudioPlayer *audioPlayer;
+@property (nonatomic, strong) IBOutlet FlipsideNavViewController *flipsideNavViewController;
 
 -(void) alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex;
 -(void) handleSwipe:(UISwipeGestureRecognizer *)sender;

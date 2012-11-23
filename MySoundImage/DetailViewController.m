@@ -80,7 +80,6 @@
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 			UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"WARNING", @"")  message:NSLocalizedString(@"NOFUN", @"") delegate:self cancelButtonTitle:NSLocalizedString(@"FINE", @"") otherButtonTitles:nil];
             [alertView show];
-            [alertView release];
             //exit(-1);  // Fail
 		}
 	}
@@ -116,7 +115,7 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil) {
-        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier] autorelease];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue2 reuseIdentifier:CellIdentifier];
         cell.editingAccessoryType = UITableViewCellAccessoryDisclosureIndicator;
     }
     
@@ -186,7 +185,6 @@
     }
 	
     [self.navigationController pushViewController:controller animated:YES];
-	[controller release];
 }
 
 
@@ -210,7 +208,6 @@
 		NSUndoManager *anUndoManager = [[NSUndoManager alloc] init];
 		[anUndoManager setLevelsOfUndo:3];
 		self.undoManager = anUndoManager;
-		[anUndoManager release];
 		
 		soundImage.managedObjectContext.undoManager = undoManager;
 	}
@@ -263,11 +260,5 @@
 
 
 
-- (void)dealloc
-{
-    [soundImage release];
-    [undoManager release];
-    [super dealloc];
-}
 
 @end
